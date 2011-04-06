@@ -1,29 +1,16 @@
-<div class="post">
-<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
-<div class="date">posted {{ post.date | date_to_string }}</div>
-
-	<div class="entry">
-	{{ content }}
-
-	{% if post.link or post.mirror %}
-	<p>
-		{% if post.link %}
-		<a href="{{ post.link }}">link</a>
-		{% endif %}
-		{% if post.mirror %}
-		(<a href="{{ post.mirror }}">mirror</a>)
-		{% endif %}
-	</p>
-	{% endif %}
-	</div>
-
-{% if post.topics %}
-	<p>
-	topics:
-	{% for t in post.topics %}
-	<a href='http://www.google.com/search?q={{ t | escape }}+site:nicodmf.github.com'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
-	{% endfor %}
-	</p>
-{% endif %}
-
-</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ndmfsdevblog'; // required: replace example with your forum shortname
+    var disqus_identifier = '{{ post.url }}';
+    var disqus_url = '{{ site.url }}{{ post.url }}';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
