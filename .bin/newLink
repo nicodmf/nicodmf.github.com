@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require 'uri'
+
+base = "/home/philips/trees/ifup/"
+url = ARGV[1]
+uri = URI.parse(url)
+host = uri.host
+path = uri.path
+
+unless ARGV[0] and ARGV[1]
+  puts 'Usage: newpost "the post title" url'
+  exit(-1)
+end
+
+date_prefix = Time.now.strftime("%Y-%m-%d")
+postname = ARGV[0].strip.downcase.gsub(/ /, '-')
+post = "/home/philips/trees/ifup/links/_posts/#{date_prefix}-#{postname}.html"
+
+header = <<-END
+---
+title: "#{ARGV[0]}"
+link: "#{ARGV[1]}"
+mirror: /mirror/#{date_prefix}-#{postname}/#{host}#{path}
+topics: []
+layout: post
+---
+ 
+END
+
+mirror = "#{base}/mirror/#{date_prefix}-#{postname}"
+Dir.mkdir(mirror)
+
+system("wget --no-parent --page-requisites --span-hosts --no-remove-listing --convert-links -E -P #{mirror} -p #{url}")
+
+File.open(post, 'w') do |f|
+  f << header
+end
+
+system("vim", post)
