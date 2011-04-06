@@ -1,0 +1,3 @@
+.lang:lang(en){background:url(../images/iconeDrapeaux.png) ;}
+.lang:lang(fr){background:url(../images/iconeDrapeaux.png) -60px;}
+.lang a {width:100%; height:100%; display:block}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:white  url(../images/bknd.jpg) top repeat-x; border:0px; padding:0px; margin:0; }
+
+/* Construction globale */
+#entete   {height:170px; background: url(../images/fond.png) #006600;}
+#page     {position:relative; background:url(../images/blanctransparent.png); width:750px; margin:auto; }
+#content  {padding:20px; position:relative;}
+#piedpage {height:270px; width:750px; background-color:#CCCCCC; left:0px;}
+
+/* Ajout divers*/
+.bord.page.gauche{position:absolute; left:-4px; top:0px; width:4px; height:100%; background: url(../images/cotegauche.png) repeat-y  }
+.bord.page.droit{position:absolute; right:-4px; top:0px; width:4px; height:100%; background: url(../images/cotedroit.png) repeat-y  }
+#entete #freeculturalworks{float:right; margin-top:10px; width:159px; height:159px; background: url(../images/Free-cultural-works-approved.png);}
+
