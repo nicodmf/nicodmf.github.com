@@ -1,0 +1,42 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom"> 
+ 
+ <title>Brandon Philips</title> 
+ <link href="http://ifup.org/complete.xml" rel="self"/> 
+ <link href="http://ifup.org/"/> 
+ <updated>{{ site.time | date_to_xmlschema }}</updated> 
+ <id>http://ifup.org/</id> 
+ <author> 
+   <name>Brandon Philips</name> 
+   <email>brandon@ifup.org</email> 
+ </author> 
+ 
+{% for post in site.posts %}
+ <entry> 
+   <title>{{ post.title }}</title> 
+   {% if post.categories contains 'links' %} 
+   <link href="{{ post.link }}"/> 
+   {% else %}
+   <link href="http://ifup.org{{ post.url }}"/> 
+   {% endif %}
+   <updated>{{ post.date | date_to_xmlschema }}</updated> 
+   <id>http://ifup.org{{ post.id }}</id> 
+   <content type="html">{{ post.content | xml_escape }}
+   {% if post.categories contains 'links' %} 
+ 
+   {% if post.mirror %} 
+    {% capture mirror %}<p><a href="{{ post.mirror }}">mirror</a></p>{% endcapture %}
+    {{ mirror| xml_escape }}
+   {% endif %}
+ 
+   {% capture linka %}<p><a href="{{ post.url }}">permalink</a></p>{% endcapture %}
+   {{ linka | xml_escape }}
+ 
+   {% endif %}
+   </content> 
+ </entry> 
+{% endfor %}
+</feed> 
