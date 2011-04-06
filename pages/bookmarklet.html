@@ -1,0 +1,20 @@
+---
+layout: default
+title: Bookmarklets
+---
+ 
+<h2>Bookmarklets</h2> 
+ 
+Bookmarklets are little javascript tools to help with repetitive browser tasks.
+To use a bookmarklet from this site: 
+ 
+<ol> 
+<li> Drag the bookmarklet (e.g. <a class="bml" href="javascript:(function(){functiongetSearchString(promptString){s=null;if(document.selection&&document.selection.createRange){s=document.selection.createRange().text;}elseif(document.getSelection){s=document.getSelection();}if(!(s&&s.length)){s=prompt(promptString,'');}returns;}searchString=getSearchString('Enterbugnumber(bnc#dddddaccepted)orsearchterms');if(searchString!=null){if(searchString.length){if(searchString.indexOf('bnc#')>=0){a=searchString.split('bnc#');location='https://bugzilla.novell.com/buglist.cgi?quicksearch='+escape(a[1]);}else{location='https://bugzilla.novell.com/buglist.cgi?quicksearch='+escape(searchString);}}else{location='https://bugzilla.novell.com/show_bug.cgi?id=';}}})();">bnc# search</a>) to your Bookmarks Toolbar</li> 
+ 
+<li>While viewing a page you want to use the bookmarklet on, click the
+bookmarklet from your Bookmarks Toolbar. </li> 
+</ol> 
+ 
+<h2>openSUSE</h2> 
+<ul> 
+<li>make searching bnc# tags easy. <a class="bml" href="javascript:(function(){functiongetSearchString(promptString){s=null;if(document.selection&&document.selection.createRange){s=document.selection.createRange().text;}elseif(document.getSelection){s=document.getSelection();}if(!(s&&s.length)){s=prompt(promptString,'');}returns;}searchString=getSearchString('Enterbugnumber(bnc#dddddaccepted)orsearchterms');if(searchString!=null){if(searchString.length){if(searchString.indexOf('bnc#')>=0){a=searchString.split('bnc#');location='https://bugzilla.novell.com/buglist.cgi?quicksearch='+escape(a[1]);}else{location='https://bugzilla.novell.com/buglist.cgi?quicksearch='+escape(searchString);}}else{location='https://bugzilla.novell.com/show_bug.cgi?id=';}}})();">bnc# search</a></li> 
