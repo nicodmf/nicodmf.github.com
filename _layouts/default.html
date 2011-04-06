@@ -4,7 +4,16 @@
 	<title>{{page.title}} &raquo; Nicolas de Marqué on github</title> 
 	<meta name="description" content="Nicolas de Marqué on Github" /> 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+
+	<link rel="stylesheet" type="text/css" href="/assets/styles/generique.css"/> 
+
+	<link rel="stylesheet" type="text/css" href="/assets/styles/layout.css"/> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/menu.css"/> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/pieddepage.css"/> 
+
 	<link rel="stylesheet" type="text/css" href="/assets/styles/page.css"/> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/langs.css"/> 
+
 	<link rel="stylesheet" type="text/css" href="/assets/styles/syntax.css" /> 
  
 	<link rel="alternate" type="application/atom+xml" href="/complete.xml" title="Ndm RSS feed" /> 
@@ -15,7 +24,10 @@
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" /> 
  
 	<link rel="openid.server" href="http://ifup.org:4567/" /> 
-	<link rel="openid.delegate" href="http://ifup.org/" /> 
+	<link rel="openid.delegate" href="http://ifup.org/" />
+	
+	<script type="text/javascript" src="http://use.typekit.com/tsv4oui.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 </head> 
 <body> 
@@ -26,15 +38,25 @@
 			<div id="skip-nav"> 
 				<a href="#main">Skip to Content</a> 
 			</div>
+			{% assign post = page %}
+			{% if post.lang == "fr" %}
 			<div class="lang">
-				<a href="en.html" title="English version">
+				<a href="{{ post.enversion }}" title="English version">
 					<span class="accessibilite">English version</span>
 				</a>
 			</div>
+			{% endif %}
+			{% if post.lang == "en" %}
+			<div class="lang">
+				<a href="{{post.frversion}}" title="French version">
+					<span class="accessibilite">Version française</span>
+				</a>
+			</div>
+			{% endif %}
 			<div id="freeculturalworks" title="Free Cultural Content" ></div> 
 		</div>
 		<div id="mainnav" class="nav"> 
-			<ul> 
+			<ul class="menu"> 
 				<li class="active first"><a href="/pages/contact">Contact</a></li> 
 				<li><a href="/">Blog</a></li> 
 				<li><a href="/pages/archives">Archives</a></li> 
@@ -42,7 +64,8 @@
 				<li><a href="http://github.com/nicodmf">Code</a></li> 
 				<li><a href="/cat/links">Links</a></li> 
 				<li class="last"><a href="/cat/cadavres_exquis">Cadavres exquis</a></li> 
-				</ul> 
+			</ul>
+			<div class="clearer"></div>
 		</div> 
 
 		<div id="main" class="pos"></div>
