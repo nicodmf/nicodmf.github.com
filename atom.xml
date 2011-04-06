@@ -1,0 +1,34 @@
+
+---
+layout: nil
+permalink: feed
+---
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom"> 
+ 
+ <title>Brandon Philips</title> 
+ <link href="http://ifup.org/feed" rel="self"/> 
+ <link href="http://ifup.org/"/> 
+ <updated>{{ site.time | date_to_xmlschema }}</updated> 
+ <id>http://ifup.org/</id> 
+ <author> 
+   <name>Brandon Philips</name> 
+   <email>brandon@ifup.org</email> 
+ </author> 
+ 
+{% for post in site.posts %}
+        {% assign cats = null %}
+        {% for cat in post.categories %}
+                {% assign cats = true %}
+        {% endfor %}
+	{% if cats == null %}
+ <entry> 
+   <title>{{ post.title }}</title> 
+   <link href="http://ifup.org{{ post.url }}"/> 
+   <updated>{{ post.date | date_to_xmlschema }}</updated> 
+   <id>http://ifup.org{{ post.id }}</id> 
+   <content type="html">{{ post.content | xml_escape }}</content> 
+ </entry> 
+	{% endif %}
+{% endfor %}
+</feed> 

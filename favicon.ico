@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!-- git web interface version 1.5.6.5, (C) 2005-2006, Kay Sievers <kay.sievers@vrfy.org>, Christian Gierke -->
+<!-- git core binaries version 1.5.6.5 -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="gitweb/1.5.6.5 git/1.5.6.5"/>
+<meta name="robots" content="index, nofollow"/>
+<title>ifup.org Git - ifup.git/summary</title>
+<link rel="stylesheet" type="text/css" href="/git/gitweb.css"/>
+<link rel="alternate" title="ifup.git - log - RSS feed" href="/git/?p=ifup.git;a=rss" type="application/rss+xml" />
+<link rel="alternate" title="ifup.git - log - RSS feed (no merges)" href="/git/?p=ifup.git;a=rss;opt=--no-merges" type="application/rss+xml" />
+<link rel="alternate" title="ifup.git - log - Atom feed" href="/git/?p=ifup.git;a=atom;opt=--no-merges" type="application/atom+xml" />
+<link rel="alternate" title="ifup.git - log - Atom feed (no merges)" href="/git/?p=ifup.git;a=atom;opt=--no-merges" type="application/atom+xml" />
+<link rel="shortcut icon" href="/git/git-favicon.png" type="image/png" />
+</head>
+<body>
+<div class="page_header">
+<a title="git homepage" href="http://git.or.cz/"><img src="/git/git-logo.png" width="72" height="27" alt="git" class="logo"/></a><a href="/git/">projects</a> / <a href="/git/?p=ifup.git;a=summary">ifup.git</a> / summary
+</div>
+<form method="get" action="/git/" enctype="application/x-www-form-urlencoded">
+<div class="search">
+<input name="p" type="hidden" value="ifup.git" />
+<input name="a" type="hidden" value="search" />
+<input name="h" type="hidden" value="HEAD" />
+<select name="st" >
+<option selected="selected" value="commit">commit</option>
+<option value="grep">grep</option>
+<option value="author">author</option>
+<option value="committer">committer</option>
+<option value="pickaxe">pickaxe</option>
+</select><sup><a href="/git/?p=ifup.git;a=search_help">?</a></sup> search:
+<input type="text" name="s"  />
+<span title="Extended regular expression"><label><input type="checkbox" name="sr" value="1" />re</label></span></div>
+</form>
+<div class="page_nav">
+summary | <a href="/git/?p=ifup.git;a=shortlog">shortlog</a> | <a href="/git/?p=ifup.git;a=log">log</a> | <a href="/git/?p=ifup.git;a=commit;h=e225af636798c5cf655436a39bb9531168ad5e28">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=e225af636798c5cf655436a39bb9531168ad5e28">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree">tree</a><br/>
+<br/>
+</div>
+<div class="title">&nbsp;</div>
+<table class="projects_list">
+<tr><td>description</td><td>ifup.org blog Jekyll source</td></tr>
+<tr><td>owner</td><td>Brandon Philips</td></tr>
+<tr><td>last change</td><td>Wed, 16 Mar 2011 03:05:20 +0000</td></tr>
+</table>
+<div class="header">
+<a class="title" href="/git/?p=ifup.git;a=shortlog">shortlog</a>
+</div>
+<table class="shortlog">
+<tr class="dark">
+<td title="2 weeks ago"><i>2011-03-16</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=e225af636798c5cf655436a39bb9531168ad5e28">opensuse-search: fix width issues <span class="refs"> <span class="head" title="heads/master">master</span></span></a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=e225af636798c5cf655436a39bb9531168ad5e28">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=e225af636798c5cf655436a39bb9531168ad5e28">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=e225af636798c5cf655436a39bb9531168ad5e28;hb=e225af636798c5cf655436a39bb9531168ad5e28">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=e225af636798c5cf655436a39bb9531168ad5e28;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="2 weeks ago"><i>2011-03-16</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" title="Merge branch 'master' of ssh://ifup.org/data/philips/git/ifup" href="/git/?p=ifup.git;a=commit;h=ecf3af31311c61530a463b579b70feaa38c005f2">Merge branch 'master' of ssh://ifup.org/data/philips... </a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=ecf3af31311c61530a463b579b70feaa38c005f2">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=ecf3af31311c61530a463b579b70feaa38c005f2">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=ecf3af31311c61530a463b579b70feaa38c005f2;hb=ecf3af31311c61530a463b579b70feaa38c005f2">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=ecf3af31311c61530a463b579b70feaa38c005f2;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="2 weeks ago"><i>2011-03-16</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=c26112ffa536de4a70f9c2720ca4484922b450ac">opensuse-search: update to current git code</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=c26112ffa536de4a70f9c2720ca4484922b450ac">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=c26112ffa536de4a70f9c2720ca4484922b450ac">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=c26112ffa536de4a70f9c2720ca4484922b450ac;hb=c26112ffa536de4a70f9c2720ca4484922b450ac">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=c26112ffa536de4a70f9c2720ca4484922b450ac;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="5 weeks ago"><i>2011-02-27</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=06560b703e493e764bad6e0c44023742e221282e">scifi: initial commit</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=06560b703e493e764bad6e0c44023742e221282e">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=06560b703e493e764bad6e0c44023742e221282e">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=06560b703e493e764bad6e0c44023742e221282e;hb=06560b703e493e764bad6e0c44023742e221282e">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=06560b703e493e764bad6e0c44023742e221282e;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="5 weeks ago"><i>2011-02-25</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=71377e93fa683c3ef8dff09893c682bbe3e84753">2011-02-24-build-service-action-menu-ui.markdown</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=71377e93fa683c3ef8dff09893c682bbe3e84753">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=71377e93fa683c3ef8dff09893c682bbe3e84753">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=71377e93fa683c3ef8dff09893c682bbe3e84753;hb=71377e93fa683c3ef8dff09893c682bbe3e84753">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=71377e93fa683c3ef8dff09893c682bbe3e84753;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="6 weeks ago"><i>2011-02-17</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=4b8c20cc22575f6a345635eb85a4a1dd60d5ad01">Open Build Service -&gt; openSUSE Build Service</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=4b8c20cc22575f6a345635eb85a4a1dd60d5ad01">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=4b8c20cc22575f6a345635eb85a4a1dd60d5ad01">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=4b8c20cc22575f6a345635eb85a4a1dd60d5ad01;hb=4b8c20cc22575f6a345635eb85a4a1dd60d5ad01">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=4b8c20cc22575f6a345635eb85a4a1dd60d5ad01;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="6 weeks ago"><i>2011-02-17</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" title="Merge branch 'master' of ssh://ifup.org/data/philips/git/ifup" href="/git/?p=ifup.git;a=commit;h=c3ff260e58d44bd5056fbf31cd753994da5da1ea">Merge branch 'master' of ssh://ifup.org/data/philips... </a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=c3ff260e58d44bd5056fbf31cd753994da5da1ea">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=c3ff260e58d44bd5056fbf31cd753994da5da1ea">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=c3ff260e58d44bd5056fbf31cd753994da5da1ea;hb=c3ff260e58d44bd5056fbf31cd753994da5da1ea">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=c3ff260e58d44bd5056fbf31cd753994da5da1ea;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="6 weeks ago"><i>2011-02-17</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=fcc03477434c666529cc1ed87a726bf46cd22e47">2011-02-17-fixing-open-build-service-ui-gripes.markdown</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=fcc03477434c666529cc1ed87a726bf46cd22e47">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=fcc03477434c666529cc1ed87a726bf46cd22e47">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=fcc03477434c666529cc1ed87a726bf46cd22e47;hb=fcc03477434c666529cc1ed87a726bf46cd22e47">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=fcc03477434c666529cc1ed87a726bf46cd22e47;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 weeks ago"><i>2011-02-13</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=7d2b4ddec9965000d13f12bce448b2f4b1e31772">comments: implement disqus</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=7d2b4ddec9965000d13f12bce448b2f4b1e31772">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=7d2b4ddec9965000d13f12bce448b2f4b1e31772">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=7d2b4ddec9965000d13f12bce448b2f4b1e31772;hb=7d2b4ddec9965000d13f12bce448b2f4b1e31772">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=7d2b4ddec9965000d13f12bce448b2f4b1e31772;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="7 weeks ago"><i>2011-02-11</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=5564f7b92ab649690afbc53ade7c09db79209cc0">opensuse-search: prettify</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=5564f7b92ab649690afbc53ade7c09db79209cc0">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=5564f7b92ab649690afbc53ade7c09db79209cc0">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=5564f7b92ab649690afbc53ade7c09db79209cc0;hb=5564f7b92ab649690afbc53ade7c09db79209cc0">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=5564f7b92ab649690afbc53ade7c09db79209cc0;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 weeks ago"><i>2011-02-10</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=5cea7d175d3416785edc4a85328127f6b093f888">opensuse-search: improve the layout a bit</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=5cea7d175d3416785edc4a85328127f6b093f888">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=5cea7d175d3416785edc4a85328127f6b093f888">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=5cea7d175d3416785edc4a85328127f6b093f888;hb=5cea7d175d3416785edc4a85328127f6b093f888">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=5cea7d175d3416785edc4a85328127f6b093f888;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="7 weeks ago"><i>2011-02-10</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=bbac840aa3c8a78695bb4fbbcb20e27318b590c6">opensuse-search: use bento for mockup</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=bbac840aa3c8a78695bb4fbbcb20e27318b590c6">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=bbac840aa3c8a78695bb4fbbcb20e27318b590c6">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=bbac840aa3c8a78695bb4fbbcb20e27318b590c6;hb=bbac840aa3c8a78695bb4fbbcb20e27318b590c6">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=bbac840aa3c8a78695bb4fbbcb20e27318b590c6;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 weeks ago"><i>2011-02-09</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=72a5176df5cdbe37cb1bc98669abdb0224288787">opensuse-search: fix</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=72a5176df5cdbe37cb1bc98669abdb0224288787">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=72a5176df5cdbe37cb1bc98669abdb0224288787">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=72a5176df5cdbe37cb1bc98669abdb0224288787;hb=72a5176df5cdbe37cb1bc98669abdb0224288787">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=72a5176df5cdbe37cb1bc98669abdb0224288787;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="7 weeks ago"><i>2011-02-09</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" title="Merge branch 'master' of ssh://ifup.org/data/philips/git/ifup" href="/git/?p=ifup.git;a=commit;h=547e40bdec269ba983b3e54fcd4a6f625520e405">Merge branch 'master' of ssh://ifup.org/data/philips... </a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=547e40bdec269ba983b3e54fcd4a6f625520e405">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=547e40bdec269ba983b3e54fcd4a6f625520e405">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=547e40bdec269ba983b3e54fcd4a6f625520e405;hb=547e40bdec269ba983b3e54fcd4a6f625520e405">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=547e40bdec269ba983b3e54fcd4a6f625520e405;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="dark">
+<td title="7 weeks ago"><i>2011-02-09</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=218bde41772d08bfc0406c6e409eec80efe61dfb">opensuse-search: implement</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=218bde41772d08bfc0406c6e409eec80efe61dfb">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=218bde41772d08bfc0406c6e409eec80efe61dfb">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=218bde41772d08bfc0406c6e409eec80efe61dfb;hb=218bde41772d08bfc0406c6e409eec80efe61dfb">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=218bde41772d08bfc0406c6e409eec80efe61dfb;sf=tgz">snapshot</a></td>
+</tr>
+<tr class="light">
+<td title="8 weeks ago"><i>2011-02-08</i></td>
+<td><i>Brandon Philips</i></td>
+<td><a class="list subject" href="/git/?p=ifup.git;a=commit;h=0ea42d18d56b91e024afcbb9e5a5d6af8c985804">images: add {{ site.url }} so RSS works</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=commit;h=0ea42d18d56b91e024afcbb9e5a5d6af8c985804">commit</a> | <a href="/git/?p=ifup.git;a=commitdiff;h=0ea42d18d56b91e024afcbb9e5a5d6af8c985804">commitdiff</a> | <a href="/git/?p=ifup.git;a=tree;h=0ea42d18d56b91e024afcbb9e5a5d6af8c985804;hb=0ea42d18d56b91e024afcbb9e5a5d6af8c985804">tree</a> | <a title="in format: tar.gz" href="/git/?p=ifup.git;a=snapshot;h=0ea42d18d56b91e024afcbb9e5a5d6af8c985804;sf=tgz">snapshot</a></td>
+</tr>
+<tr>
+<td colspan="4"><a href="/git/?p=ifup.git;a=shortlog">...</a></td>
+</tr>
+</table>
+<div class="header">
+<a class="title" href="/git/?p=ifup.git;a=heads">heads</a>
+</div>
+<table class="heads">
+<tr class="dark">
+<td><i>2 weeks ago</i></td>
+<td class="current_head"><a class="list name" href="/git/?p=ifup.git;a=shortlog;h=refs/heads/master">master</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=shortlog;h=refs/heads/master">shortlog</a> | <a href="/git/?p=ifup.git;a=log;h=refs/heads/master">log</a> | <a href="/git/?p=ifup.git;a=tree;h=refs/heads/master;hb=master">tree</a></td>
+</tr><tr class="light">
+<td><i>5 months ago</i></td>
+<td><a class="list name" href="/git/?p=ifup.git;a=shortlog;h=refs/heads/prs505">prs505</a></td>
+<td class="link"><a href="/git/?p=ifup.git;a=shortlog;h=refs/heads/prs505">shortlog</a> | <a href="/git/?p=ifup.git;a=log;h=refs/heads/prs505">log</a> | <a href="/git/?p=ifup.git;a=tree;h=refs/heads/prs505;hb=prs505">tree</a></td>
+</tr></table>
+<div class="page_footer">
+<div class="page_footer_text">ifup.org blog Jekyll source</div>
+<a class="rss_logo" title="log RSS feed" href="/git/?p=ifup.git;a=rss">RSS</a>
+<a class="rss_logo" title="log Atom feed" href="/git/?p=ifup.git;a=atom">Atom</a>
+</div>
+</body>
+</html>

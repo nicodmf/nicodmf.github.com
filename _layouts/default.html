@@ -1,14 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="assets/css/global.css">
-<title>{{ page.title }}</title>
-
-</head>
-<body>
-	<div class="menu"></menu>
-	<div class=content>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us"> 
+<head profile="http://gmpg.org/xfn/11"> 
+    <title>{{page.title}} &raquo; Brandon Philips ifup.org</title> 
+	<meta name="description" content="Brandon Philips weblog on open source, robotics and technology" /> 
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+	<link rel="stylesheet" type="text/css" href="/style/style.css"/> 
+	<link rel="stylesheet" type="text/css" href="/style/syntax.css" /> 
+ 
+	<link rel="alternate" type="application/atom+xml" href="/complete.xml" title="Brandon Philips RSS feed" /> 
+	<link rel="alternate" type="application/atom+xml" href="/feed" title="Brandon Philips Posts RSS feed" /> 
+	<link rel="alternate" type="application/atom+xml" href="/links/feed" title="Brandon Philips Links RSS feed" /> 
+	<link rel="alternate" type="application/atom+xml" href="/violin/feed" title="Brandon Philips Violin RSS feed" /> 
+ 
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" /> 
+ 
+	<link rel="openid.server" href="http://ifup.org:4567/" /> 
+	<link rel="openid.delegate" href="http://ifup.org/" /> 
+</head> 
+<body> 
+	<div id="skip-nav"> 
+		<a href="#main">Skip to Content</a> 
+	</div> 
+ 
+	<div id="wrapper"> 
+		<div id="banner"> 
+			<h1 id="logo"><a href="/">Brandon Philips - http://ifup.org</a></h1> 
+		</div> 
+ 
+		<div id="mainnav" class="nav"> 
+			<ul> 
+				<li class="active first"><a href="/contact">Contact</a></li> 
+				<li><a href="/">Blog</a></li> 
+				<li><a href="/archives">Archives</a></li> 
+				<li><a href="/portfolio">Portfolio</a></li> 
+				<li><a href="http://ifup.org/git">Code</a></li> 
+ 
+				<li><a href="http://photo.ifup.org/">Photos</a></li> 
+				<li><a href="/links">Links</a></li> 
+				<li class="last"><a href="/violin">Violin</a></li> 
+				</ul> 
+		</div> 
+ 
+	<div id="content"> 
 		{{ content }}
-	</div>
-</body>
-</html>
+	</div> 
+   
+ 
+	<div id="footer"> 
+		<p class="left">&copy; 2005-{{ site.time | date: '%Y' }} Brandon Philips brandon@ifup.org</p> 
+		<p class="right"><b>Common misspellings:</b> Brandon Phillips, Branden Philips</p> 
+		<br style="clear: both; height: 0;" /> 
+	</div> 
+			<script type="text/javascript"> 
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script> 
+			<script type="text/javascript"> 
+			var pageTracker = _gat._getTracker("UA-3607048-1");
+			pageTracker._initData();
+			pageTracker._trackPageview();
+			</script> 
+		</div> 
+<script type="text/javascript"> 
+    var disqus_shortname = 'ifup';
+ 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script> 
+	</body> 
+</html> 
