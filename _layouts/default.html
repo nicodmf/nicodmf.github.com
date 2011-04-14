@@ -1,21 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us"> 
+{% include translation.markdown %}{{ logTranslation }}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{codeLang}}" lang="{{codeLang}}" class="{{css}}"> 
 <head profile="http://gmpg.org/xfn/11"> 
 	<title>{{page.title}} &raquo; Nicolas de Marqué on github</title> 
-	<meta name="description" content="Nicolas de Marqué on Github" /> 
+	<meta name="description" content="{{page.title}} &raquo; Nicolas de Marqué on github" /> 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 
 	<link rel="stylesheet" type="text/css" href="/assets/styles/generique.css"/> 
-
-	<link rel="stylesheet" type="text/css" href="/assets/styles/layout.css"/> 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/menu.css"/> 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/pieddepage.css"/> 
-
-	<link rel="stylesheet" type="text/css" href="/assets/styles/page.css"/> 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/langs.css"/> 
-
 	<link rel="stylesheet" type="text/css" href="/assets/styles/syntax.css" /> 
- 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/logos.css" /> 
+
+	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/layout.css"/> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/menu.css"/> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/page.css"/> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/pieddepage.css"/> 
 	<link rel="alternate" type="application/atom+xml" href="/complete.xml" title="Ndm RSS feed" /> 
 	<link rel="alternate" type="application/atom+xml" href="/feed" title="Ndm Posts RSS feed" /> 
 	<link rel="alternate" type="application/atom+xml" href="/cat/links/feed" title="Ndmf Links RSS feed" /> 
@@ -37,62 +35,24 @@
 		<div id="entete">
 			<div id="skip-nav"> 
 				<a href="#main">Skip to Content</a> 
-			</div>
-			{% assign post = page %}
-			{% if post.lang == "fr" %}
-			<div class="lang">
-				<a href="{{ post.enversion }}" title="English version">
-					<span class="accessibilite">English version</span>
-				</a>
-			</div>
-			{% endif %}
-			{% if post.lang == "en" %}
-			<div class="lang">
-				<a href="{{post.frversion}}" title="French version">
-					<span class="accessibilite">Version française</span>
-				</a>
-			</div>
-			{% endif %}
-			<div id="freeculturalworks" title="Free Cultural Content" ></div> 
+			</div>			
 		</div>
-		<div id="mainnav" class="nav"> 
-			<ul class="menu"> 
-				<li class="active first"><a href="/pages/contact">Contact</a></li> 
-				<li><a href="/">Blog</a></li> 
-				<li><a href="/pages/archives">Archives</a></li> 
-				<li><a href="/pages/portfolio">Portfolio</a></li> 
-				<li><a href="http://github.com/nicodmf">Code</a></li> 
-				<li><a href="/cat/links">Links</a></li> 
-				<li class="last"><a href="/cat/cadavres_exquis">Cadavres exquis</a></li> 
-			</ul>
-			<div class="clearer"></div>
-		</div> 
-
+		
+		{% include menu.html %}
+		
 		<div id="main" class="pos"></div>
 		<div id="content">
 			{{ content }}
 		</div> 
  
-		<div id="piedpage"> 
-			<p class="left">&copy; 2011-{{ site.time | date: '%Y' }} Nicolas de Marqué Fromentin</p> 
-			<p class="right"></p> 
-			<br class="clearer" /> 
+		<div id="piedpage">
+			<div class="copyright">&copy; 2011-{{ site.time | date: '%Y' }} - Design by ndm</div>
 		</div>
 
 	</div>
 
-	<!-- Comments stats -->			
-	<script type="text/javascript"> 
-	    var disqus_shortname = 'ndmfsdevblog';
-	    var disqus_identifier = '{{ post.url }}';
-	    var disqus_url = '{{ site.url }}/{{ post.url }}';
-	    /* * * DON'T EDIT BELOW THIS LINE * * */
-	    (function () {
-	        var s = document.createElement('script'); s.async = true;
-	        s.type = 'text/javascript';
-	        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-	        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-	    }());
-	</script> 
+	<!-- Comments -->			
+	{% include disqus_layout.html %}
+
 </body> 
 </html> 

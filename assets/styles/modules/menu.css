@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+#mainnav {opacity:0.6}
+#mainnav:hover {opacity:1}
+#mainnav {text-align:center; padding:5px; border-style:solid; border-width:1px 0px}
+#mainnav a{padding:5px; border-style:solid; border-width:1px; border-radius:10px; text-shadow: 1px 1px 3px black; }
+
+#mainnav a{text-decoration:none; font-weight:bold; font-size:13px; }
+#mainnav a{width:100%; height:100%;}
+

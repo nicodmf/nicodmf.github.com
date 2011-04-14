@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head profile="http://gmpg.org/xfn/11"> 
+	<title>Nicolas de Marqué on github</title> 
+	<meta name="description" content="Nicolas de Marqué on github" /> 
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+
+	<link rel="stylesheet" type="text/css" href="assets/styles/gener12ique.css"/> 
+ 
+	<script type="text/javascript" src="assets/js/mootools-core-1.3.1-full-compat.js"></script>
+	<script type="text/javascript" src="assets/js/mootools-more-1.3.1.1.js"></script>
+
+<!--
+	<link rel="stylesheet" type="text/css" href="/assets/styles/syntax.css" /> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/logos.css" /> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/pages/index.css" /> 
+
+	<link rel="alternate" type="application/atom+xml" href="/complete.xml" title="Ndm RSS feed" /> 
+	<link rel="alternate" type="application/atom+xml" href="/feed" title="Ndm Posts RSS feed" /> 
+	<link rel="alternate" type="application/atom+xml" href="/cat/links/feed" title="Ndmf Links RSS feed" /> 
+	<link rel="alternate" type="application/atom+xml" href="/cat/cadavres_exquis/feed" title="Ndm Cadavres exquis RSS feed" /> 
+ 
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" /> 
+	
+	<script type="text/javascript" src="http://use.typekit.com/tsv4oui.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
+	
+	<style>
+		body{ font-size:3.5em; font-family:"Times New Roman", Helvetica, sans-serif;}
+		html, body{
+			background-image: -webkit-gradient( radial, 50% 50%, 0, 50% 50%, 1000, from(rgba(245, 245, 245, 1.0)), to(rgba(100, 100, 100, 1.0)) );
+			background-image: -moz-radial-gradient( 50% 50% 90deg, rgba(245, 245, 245, 1.0) 0%, rgba(100, 100, 100, 1.0) 100% );
+			width: 100%;height: 100%; border:0; margin:0; padding:0;
+			overflow:hidden;
+		}
+
+		table{border-spacing:0;margin:0;padding:0px; height:300px; width:600px; margin:auto; border-collapse:collapse; position:relative;}
+		table.placement{width:200%;height:100%}
+		/*.l1{height:150px; }*/
+		td{text-align:center;width:300px}
+		td.placement{width:100%;height:100%; vertical-align:center;}
+		th{font-size:0.4em; font-weight:normal}
+
+		div#ra table.placement{left:-100%;}
+		div#la table.placement{width:200%;height:100%}
+		
+		div.all{position:absolute; top:0px; width:50%; height:100%; left:0px; z-index:0; overflow:hidden}
+		div#ra.all{left:50%;}
+		
+		div.overlay{width:100%; height:100%;background:black; opacity:1; top:0px; left:0px; position:absolute;}
+		.trans div.overlay{opacity:0;}
+		.trans{z-index:5}
+		
+		div{color:white;}
+		a{color:white; text-decoration:none;}
+		.trans  {color:black}
+		.trans a{color:black}
+		
+		div.flags{position:absolute; top:50%; width:300px;}
+		div.flag{width:300px; top:-75px;height:150px; background-image:url(assets/images/langs.png);position:relative; z-index:10}
+		#la div.flag {background-position:0 -150px; right:0px;}
+		#la div.flags{right:-300px}
+		#ra div.flags{left:-300px}
+		
+		/*
+		.trans a.engraved{color:#cccccc;text-shadow:1px 1px white, -1px -1px #444}
+		.trans a.degraved{color:inherit;text-shadow:none}
+		*/
+		
+		/* Special rules if javascript isn't activated */
+		.notjavascripted th.fr{ padding-right:50%; }
+		.notjavascripted th.en{ padding-left:50%; color:white}
+		.notjavascripted td a.fr{color:black}
+		.notjavascripted td a.en{color:white}
+		/*.notjavascripted td:hover{ border:3px solid black}*/
+		.notjavascripted .all{width:100%}
+		.notjavascripted div#la table.placement{width:100%}
+		.notjavascripted #la.trans div.overlay:hover div.flag{background-position:0 0 !important;}
+		
+		.notjavascripted td:hover.en a{
+			color:#222;text-shadow:1px 1px #999, -1px -1px black;
+		}
+		.notjavascripted td:hover.en{
+			padding-top:0px;
+			padding-left:0px;
+			background-image: -webkit-gradient( radial, 50% 50%, 0, 50% 50%, 75, from(rgba(245, 245, 245, 1.0)), to(rgba(100, 100, 100, 1.0)) );
+			background-image: -moz-radial-gradient( 50% 50% 90deg, contain, rgba(160, 160, 160, 1.0) 0%, rgba(100, 100, 100, 0.0) 80% );
+			/*text-shadow:black 1px 0 1px,black -1px -1px 1px,black 0 -1px 1px,black -1px -1px 1px,black 0 0 1px,black 1px 0 1px;*/
+			
+
+		}/**/
+		.notjavascripted td:hover.fr a	{color:#cccccc;}
+		.notjavascripted td:hover.fr	{
+			padding-top:2px;
+			padding-left:2px;
+			color:#cccccc;text-shadow:1px 1px white, -1px -1px #444;
+			background-image: -webkit-gradient( radial, 50% 50%, 0, 50% 50%, 75, from(rgba(255, 255, 255, 1.0)), to(rgba(100, 100, 100, 1.0)) );
+			background-image: -moz-radial-gradient( 50% 50% 90deg, contain, rgba(255, 255, 255, 1.0) 0%, rgba(250, 250, 250, 0.0) 80% );
+			/*text-shadow:#ccc 1px 0px 1px,#ccc 0px 1px 1px,#cc5 -1px 0px 1px, #cc5 -1px -1px 1px, #fff 0px -1px 1px;;*/
+		}
+
+		.notjavascripted .trans div.overlay{left:50%;width:50%;opacity:1}
+/*
+		.notjavascripted #la.trans div.overlay:hover div.flags{left:0px !important;}
+		.notjavascripted #la.trans div.overlay:hover div.flag{left:300px !important;}
+		.notjavascripted #la.trans:hover div.flags{right:100%;}
+		.notjavascripted #la.trans:hover div.flag{right:300px;}
+		.notjavascripted #la.trans:hover div.flag{background-position:0 0;}
+*/
+		
+	</style>
+	
+	<script type="text/javascript">
+		function activ(e)
+		{
+			fr = e.get('id')=='ra'
+			$$('body [lang='+(fr?'fr':'en')+']').each(function(e){	e.show() });
+			inv=fr?$('la'):$('ra'); e.addClass('trans'); inv.removeClass('trans');
+			cancel('fr');
+			cancel('fr');
+		}
+		function cancelEffect(effect, property, to)
+		{
+			if(effect.options.inClose != true)
+			{
+
+				effect.cancel()
+				setOptions(effect, property);
+				effect.start(to);
+				effect.options.inClose = true
+			}
+		}
+		function cancel(lang)
+		{
+			cancelEffect(textEn, TextEffectClose, textEnPropO)
+			cancelEffect(textFr, TextEffectClose, textFrPropO)
+			cancelEffect(moveEn, MoveEffectClose, 0)
+			cancelEffect(moveFr, MoveEffectClose, 0)
+		}		
+		function startEffect(effect, property, to, chain)
+		{
+			if(effect.options.inOpen != true)
+			{
+				effect.cancel()
+				setOptions(effect, property);
+				if(chain==true)setOptions(effect, {'link':'chain'});
+				effect.start(to)
+				effect.options.inOpen = true
+			}
+		}
+		function openLink(evt)
+		{
+			e=$(evt.target);
+			lang=e.parentNode.hasClass("l1")?"fr":"en";
+
+			if(lang=="fr")
+			{
+				cancelEffect(textFr, TextEffectClose, textFrPropO)
+				cancelEffect(moveEn, MoveEffectClose, 0)
+				 startEffect(textEn, TextEffectOpen, textEnPropF)
+				 startEffect(moveFr, MoveEffectOpen, 350)
+			 	//$$('#la a[lang=fr]')[0].addClass('engraved')
+			}
+			else
+			{
+				cancelEffect(textEn, TextEffectClose, textEnPropO)
+				cancelEffect(moveFr, MoveEffectClose, 0)
+				 startEffect(textFr, TextEffectOpen, textFrPropF)
+				 startEffect(moveEn, MoveEffectOpen, 350)
+			}
+
+		}
+		function setOptions(o, p){
+			for (var key in p)
+			{
+				eval("o.options."+key+"="+"p."+key);
+			}
+		}
+		var mx;
+		var my;
+		var controlPosition=function(e){mx = e.client.x; my = e.client.y;}
+		function inBox(p,b){
+			c = b.getCoordinates();
+			return c.left < p.x && p.x < c.right && c.top < p.y && p.y < c.bottom;
+		}
+		function controls(){
+			$$('a').each(function(a){
+				mp = {'x':mx, 'y':my}
+				if( a.getParent('.trans') != null && inBox(mp, a.getParent(".all")) && inBox(mp, a)){
+					a.fireEvent('mouseenter', {'target':a})
+				}
+			})
+		}
+		function completeFunction(){this.options.inClose=false;this.options.inOpen=false;}
+		var moveEn = null
+		var moveFr = null
+		var textFr = null
+		var textEn = null
+		var textEnPropO = new Hash();
+		var textFrPropO = new Hash();
+		var textEnPropF = new Hash();
+		var textFrPropF = new Hash();
+		var TextEffectOpen  = {duration:1000, transition: Fx.Transitions.Sine.easeOut  , complete:completeFunction, 'inClose':false, 'inOpen':false}
+		var TextEffectClose = {duration:200,  transition: Fx.Transitions.Sine.easeIn   , complete:completeFunction, 'inClose':false, 'inOpen':false}
+		var MoveEffectOpen  = {duration:2000, transition: Fx.Transitions.Bounce.easeOut, complete:completeFunction, 'inClose':false, 'inOpen':false}
+		var MoveEffectClose = {duration:500,  transition: Fx.Transitions.Sine.easeIn   , complete:completeFunction, 'inClose':false, 'inOpen':false}
+		window.addEvent("domready", function(){
+			$$('a').each(function(a){a.addEvent('mouseenter', openLink)})
+
+			$$('body [lang=fr]').combine($$('th[lang=en]')).each(function(e,i){textFrPropO.set(i, {'opacity':1}); textFrPropF.set(i,{'opacity':0});})
+			$$('body [lang=en]').combine($$('th[lang=fr]')).each(function(e,i){textEnPropO.set(i, {'opacity':1}); textEnPropF.set(i,{'opacity':0});})
+			textEnPropO = textEnPropO.getClean();
+			textFrPropO = textFrPropO.getClean();
+			textEnPropF = textEnPropF.getClean();
+			textFrPropF = textFrPropF.getClean();
+			textFr = new Fx.Elements($$('[lang=fr]').combine($$('th[lang=en]')), TextEffectOpen);
+			textEn = new Fx.Elements($$('[lang=en]').combine($$('th[lang=fr]')), TextEffectClose);
+
+			moveFr = new Fx.Tween($("ra").getElement(".flag"), new Hash().extend(MoveEffectOpen).extend({'property':'left'}));
+			moveEn = new Fx.Tween($("la").getElement(".flag"), new Hash().extend(MoveEffectClose).extend({'property':'right'}));
+
+			$("la").addEvent('mouseenter', function(){activ($('la'));})
+			$("ra").addEvent('mouseenter', function(){activ($('ra'));})
+			$("la").getElements('a').addEvent('mouseleave', function(){cancel('fr');})
+			$("ra").getElements('a').addEvent('mouseleave', function(){cancel('en');})
+
+			$$("body")[0].addEvent('mousemove', controlPosition);
+			setInterval(controls, 1000) 
+		})
+	</script>
+	
+</head> 
+<body class="notjavascripted">
+
+<div id="la" class="all trans">
+	<div class="overlay ">
+		<div class="flags">
+			<div class="flag"></div>
+		</div>
+	</div>
+	<table class="placement">
+		<tr><td class="placement">
+		<table class="langues">
+			<tr><th colspan="2" lang="fr" class="fr">Choisissez votre langue</th></tr>
+			<tr>
+				<td class="l1 fr"><a href="index_fr" lang="fr" class="fr">Version Française</a></td>
+				<td class="en"><a href="index_en.html" lang="en" class="en">English Version</a></td>
+			</tr>
+			<tr><th colspan="2" lang="en" class="en">Choice your language</th></tr>
+		</table>
+		</td></tr>
+	</table>
+</div>
+
+<script type="text/javascript">
+	document.getElementsByTagName("body").item(0).setAttribute("class", "")
+	c=$('la').clone().set("id", "ra").toggleClass("trans")
+	c.inject($("la"), "after")
+</script>
+
+</body> 
+</html> 

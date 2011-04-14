@@ -1,0 +1,11 @@
+@charset "utf-8";
+#piedpage .titre{
+font-family: Georgia, "Times New Roman", Times, serif; font-size: 24px; display: block; padding:15px; text-decoration:underline}
+
+#piedpage .boite {width:50%;}
+#piedpage .logos {margin:0px 20px 10px 20px; }
+#piedpage .boite .logo {margin:5px; float:left;display:inline-block; }
+
+#piedpage .boite.qualites .logos {margin-right:0px;border-right:thin dotted grey}
+
+#piedpage .copyright{clear:both; text-align:center;font-size: 0.7em; line-height:2em;}

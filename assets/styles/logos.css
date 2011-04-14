@@ -1,0 +1,49 @@
+/* Logos */
+
+.logo  {background-image:url("../images/logos.png"); background-repeat:no-repeat}
+.logo a{display:block; width:100%; height:100%;}
+
+/* Browser */
+.ie, .ie5, .ie6, .ie7, .ie8, .ie9, 
+.firefox, .firefox0, .firefox1, .firefox2, .firefox3, .firefox4,
+.opera, .chrome, .safari
+{width:32px; height:32px;}
+.ie,.ie9   {background-position: -96px    0px;}
+.ie5       {background-position: -96px    0px;}
+.ie6       {background-position: -96px    0px;}
+.ie7,.ie8  {background-position: -96px    0px;}
+.ie9       {background-position: -96px    0px;}
+.firefox   {background-position: -64px  -32px;}
+.firefox0  {background-position: -00px  -32px;}
+.firefox1  {background-position: -32px  -32px;}
+.firefox2  {background-position: -32px  -32px;}
+.firefox3  {background-position: -32px  -32px;}
+.firefox4  {background-position: -64px  -32px;}
+.chrome    {background-position: -96px  -32px;}
+.opera     {background-position: -160px -32px;}
+.safari    {background-position: -128px -32px;}
+
+/* Javascript framework */
+.jquery2 {background-position: -0px  -96px; width:131px; height:32px;}
+.mootools{background-position: -0px -128px; width:128px; height:32px;}
+
+/* Normes */
+.w3c      {background-position: -224px  -96px; width:86px; height:58px;}
+.ccbyncsa {background-position: -224px -160px; width:180px; height:63px;}
+
+/* Bannières */
+.freecultural{background-position: -448px -64px; width:159px; height:159px;}
+
+/* Langues */
+.fr{ background-position: -480px -0px; width:52px; height:32px;}
+.en{ background-position: -532px -0px; width:52px; height:32px;}
+
+/* Community */
+.stumbleupon, .google, .digg, .delicious, .twitter, .reddit
+{ width:16px; height:16px; }
+.stumbleupon { background-position:  -96px -320px;}
+.google      { background-position:  -96px -336px;}
+.digg        { background-position: -112px -320px;}
+.delicious   { background-position: -128px -336px;}
+.twitter     { background-position: -128px  320px;}
+.reddit      { background-position: -112px -336px;}

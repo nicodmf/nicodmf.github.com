@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:white  url(../../images/bknd.jpg) top repeat-x; border:0px; padding:0px; margin:0; }
+
+/* Construction globale */
+#entete   {height:170px; background: #006600;}
+#page     {position:relative; background:url(../../images/blanctransparent.png); width:750px; margin:auto; }
+#content  {padding:5px 20px; position:relative;}
+#piedpage {width:750px; background-color:#CCCCCC; left:0px;}
+
+/* Ajout divers*/
+.bord.page.gauche{position:absolute; left:-4px; top:0px; width:4px; height:100%; background: url(../../images/cotes.png) repeat-y -4px }
+.bord.page.droit{position:absolute; right:-4px; top:0px; width:4px; height:100%; background: url(../../images/cotes.png) repeat-y  }
+
+/* Icones diverses */
+#entete #freeculturalworks{float:right; margin-top:10px; width:159px; height:159px;}
+
+.lang.logo{margin-top:-50px;}
+

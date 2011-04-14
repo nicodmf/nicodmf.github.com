@@ -1,9 +1,0 @@
----
-title: Test
-layout: default
----
-{% capture code %}{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}{% endcapture %}{% include highlight.markdown %}

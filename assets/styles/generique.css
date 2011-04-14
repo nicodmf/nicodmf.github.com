@@ -1,6 +1,12 @@
 @charset "utf-8";
-/* CSS Document */
+
 .accessibilite{display:none;}
-div.image{text-align:center; border:0px;}
 .legende{font-style:italic; text-align:center;}
 .clearer{clear:both; font-size:0px; height:0px}
+.floatl{float: left;}
+.floatr{float:right;}
+
+div.image{text-align:center; border:0px;}
+
+cite:before, blockquote:before{ content: '\201C'; }
+cite:after , blockquote:after { content: '\201D'; }

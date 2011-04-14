@@ -1,9 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-#mainnav ul.menu {clear:both; text-align:center; border:0; margin:0; padding:0}
-#mainnav ul.menu li{min-width:50px; list-style:none; text-align:center; padding:5px; border:1px solid green; background:light-green; display:inline-block; -float:left; border-radius:5px;}
-
-#mainnav ul.menu li a{text-decoration:none; font-weight:bold; font-size:13px; }
-#mainnav ul.menu li a{color:white;}
-#mainnav ul.menu li a:hover{color:white;text-decoration:underline}
-

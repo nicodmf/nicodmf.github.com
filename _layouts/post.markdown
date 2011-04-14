@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if page.toTranslate %}
+	{% include translation.data.markdown %}
+{% endif %}
+
 {% assign post = page %}
 
 <div class="post">
@@ -27,20 +31,25 @@ layout: default
 	<p>
 	topics:
 	{% for t in post.topics %}
-	<a href='http://www.google.com/search?q={{ t | escape }}+site:nicodmf.github.com'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
+		<a href='http://www.google.com/search?q={{ t | escape }}+site:nicodmf.github.com'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
 	{% endfor %}
 	</p>
 {% endif %}
 
 </div>
 
-{% include post.markdown %}
+{% include disqus_post.html %}
 
 <div id="related">
   <h2>Related Posts</h2>
   <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+	{% for post in site.related_posts limit:4 %}
+		{% if post.id != page.translation %}
+			<li>
+				<span>{{ post.date | date_to_string }}</span>
+				&raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
   </ul>
 </div>
