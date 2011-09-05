@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [ coupdegueule, opensource, launchpad ]
-published: false
+published: true
 ---
 
 Aujourd'hui coup de gueule sur les systèmes de gestion de bug open source et les bases de connaissances open source.

@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 ---
 
 Le modèle de développement des produits open source est t'il fiable, est t'il viable. L'open source dont une des premières affirmation est d'amener la pérénité du système d'information est t'elle capable de répondre aux attentes des entreprises tant en terme de qualité que de sécurité?
