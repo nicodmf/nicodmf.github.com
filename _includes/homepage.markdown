@@ -24,10 +24,10 @@
 {% capture log %}
 {% assign post = null %}
  
-{% for p in site.posts %}
+{% for onep in site.posts %}
         {% assign cats = false %}
 
-        {% for cat in p.categories %}
+        {% for cat in onep.categories %}
 			{% if cat == 'module' %}
                 {% assign cats = true %}
             {% endif %}
@@ -35,9 +35,9 @@
 		
 		
 
-        {% if post == null and ( p.lang == page.lang or p.lang == null ) %}
+        {% if post == null and ( onep.lang == page.lang or onep.lang == null ) %}
                 {% if cats == null %}
-                        {% assign post = p %}
+                        {% assign post = onep %}
                 {% endif %}
         {% endif %}
 {% endfor %}
