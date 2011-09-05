@@ -24,12 +24,12 @@
 {% capture log %}
 {% assign post = null %}
  
-{% for onep in site.posts %}
+{% for one_post in site.posts %}
 	{% if post == null %}
 1
         {% assign cats = false %}
 2
-        {% for cat in onep.categories %}
+        {% for cat in one_post.categories %}
 2.1
 			{% if cat == 'module' %}
 2.2
@@ -39,7 +39,7 @@
 2.4
         {% endfor %}		
 3
-        {% if onep.lang == page.lang  %}
+        {% if one_post.lang == page.lang  %}
 4
                 {% if cats == null %}
 5
