@@ -1,5 +1,5 @@
 {% capture displaycats %}
-{% endcapture %}
+
 
 {% for cat in post.categories %}
 	{% case cat %}
@@ -15,6 +15,9 @@
 			{% endif %}
 	{% endcase %}
 {% endfor %}
+
+{% endcapture %}
+
 {% for tag in post.tags %}
 	{% case tag %}
 		{% when "tagpage" %} {% assign cats = false %}
