@@ -45,7 +45,8 @@
 5
 					{% capture captured %}					
 <div class="entry">
-	<h2><a href='{{one_post.url}}'>{{one_post.title}}</a></h2>
+<a href='{{one_post.url}}'>{{one_post.title}}</a>
+=================================================
 	<div class="content-entry">
 		{{ one_post.content }}
 		<a href="{{ site.url }}/{{ one_post.url }}#disqus_thread" data-disqus-identifier="{{ one_post.url }}">{{ str_comments }}</a>
