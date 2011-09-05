@@ -1,5 +1,5 @@
 ---
-layout: links
+layout: post
 title: Jekyll
 lang: fr
 translation: auto
