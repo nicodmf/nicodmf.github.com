@@ -1,0 +1,15 @@
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+
+{% if lang == "fr" %}
+	{% assign titre = "Informations de contact" %}
+	{% assign email = "Courriel" %}
+{% else %}
+	{% assign titre = "Contact informations" %}
+	{% assign email = "Email" %}
+{% endif %}
+
+<h1>{{titre}}</h1>
+
+<p>
+	{{email}} : ndmf@gmail.com
+</p>

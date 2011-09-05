@@ -1,4 +1,4 @@
-{% capture logTranslation%}
+{% capture logTranslation %}
 Translation
 ===========
 
@@ -6,14 +6,49 @@ Page en langue : {{ page.lang }}
 
 {{ page.css }}
 
+Assignation des traductions
+---------------------------
+{% case page.lang %}
+	{% when "en" %}{% assign lang = "en" %}
+	{% when "fr" %}{% assign lang = "fr" %}
+	{% else %}     {% assign lang = "fr" %}
+{% endcase %}
+
+{% if lang == "en" %}
+	{% assign otherlang     = "fr" %}
+	{% assign codeLang      = "en-En" %}
+	{% assign langVersion   = "version française" %}
+{% else %}
+	{% assign otherlang     = "en" %}
+	{% assign codeLang      = "fr-Fr" %}
+	{% assign langVersion   = "english version" %}
+{% endif %}
+
+Définition de la traduction
+---------------------------
+{{ page.url }}
+
+Sur une ligne pour éviter les lignes inutiles
+{% case page.translation %}
+	{% when "auto" %}
+		{% if lang == "fr" %}{% capture translationUrl %}{{ page.url|replace:"_fr","_en" }}{% endcapture %}{% endif %}
+		{% if lang == "en" %}{% capture translationUrl %}{{ page.url|replace:"_en","_fr" }}{% endcapture %}{% endif %}
+	{% when null %}
+		{% assign translationUrl = false %}{% else %}{% assign translationUrl = page.translation %}
+{% endcase %}
+
+Translation originale : {{ page.translation}}
+Translation finale: {{ translationUrl }}
+
 Recherche des variables de référence
 ------------------------------------
 {% if page.reference != true %}
 
-	{% for post in site.posts %}
-		{% if post.id == page.translation %}
-			{{ post.id }}
-			{% assign translation = post %}
+	{% for p in site.posts %}
+		{{ p.url }}
+		{% if p.url == translationUrl %}
+			Translated post : {{ p.id }}
+			{% assign translation = p %}
 		{% endif %}
 	{% endfor %}
 
@@ -21,7 +56,7 @@ Recherche des variables de référence
 	{% assign compatibilities = translation.compatibilities %}
 	{% assign free = translation.free %}
 	{% assign css = translation.css %}
-	{% assign lang = translation.lang %}
+	{% assign langref = translation.lang %}
 
 {% else %}
 
@@ -29,25 +64,8 @@ Recherche des variables de référence
 	{% assign compatibilities = page.compatibilities %}
 	{% assign free = page.free %}
 	{% assign css = page.css %}
-	{% assign lang = page.lang %}
+	{% assign langref = page.lang %}
 
 {% endif %}
 
-Assignation des traductions
----------------------------
-{% case page.lang %}
-	{% when "en" %}
-		{% assign codeLang      = "en-En" %}
-		{% assign langVersion   = "version française" %}
-		{% assign compliance    = "compliance" %}
-		{% assign compatibility = "compatibility" %}
-	{% when "fr" %}
-		{% assign codeLang      = "fr-Fr" %}
-		{% assign langVersion   = "english version" %}
-		{% assign compliance    = "qualité" %}
-		{% assign compatibility = "compatibilité" %}
-{% endcase %}
-
-{% endcapture %}
-{% assign logTranslation = noLogTranslation %}
-
+{% endcapture %}{% assign logTranslation = nologTranslation %}

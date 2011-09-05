@@ -1,0 +1,28 @@
+{% capture displaycats %}
+{% for cat in post.categories %}
+	{% case cat %}
+		{% when "tagpage" %} {% assign cats = false %}
+		{% when "cat" %}
+		{% when "module" %}<span class="cat real actif"><a href="/pages/{{cat}}_{{lang}}" title="{{cat|capitalize}}">{{cat}}</a></span>
+		{% when "link" %}<span class="cat real actif"><a href="/pages/{{cat}}_{{lang}}" title="{{cat|capitalize}}">{{cat}}</a></span>
+		{% else %}
+			{% assign pagetag = false %}
+			{% for p2 in site.posts %}{% if p2.tagtodraw == cat %}{% assign pagetag = true %}{% endif %}{% endfor %}
+			{% if pagetag %}<span class="cat real actif"><a href="/pages/tags/{{cat}}_{{lang}}/" title="{{cat|capitalize}}">{{cat}}</a></span>
+			{% else %}<span class="cat real">{{cat}}</span>
+			{% endif %}
+	{% endcase %}
+{% endfor %}
+{% for tag in post.tags %}
+	{% case tag %}
+		{% when "tagpage" %} {% assign cats = false %}
+		{% when page.tagtodraw %} {% assign cats = true %}
+		{% else %}
+			{% assign pagetag = false %}
+			{% for p2 in site.posts %}{% if p2.tagtodraw == tag %}{% assign pagetag = true %}{% endif %}{% endfor %}
+			{% if pagetag %}<span class="cat tag actif"><a href="/pages/tags/{{tag}}_{{lang}}/" title="{{tag|capitalize}}">{{tag}}</a></span>
+			{% else %}<span class="cat tag">{{tag}}</span>
+			{% endif %}
+	{% endcase %}
+{% endfor %}
+{% endcapture %}

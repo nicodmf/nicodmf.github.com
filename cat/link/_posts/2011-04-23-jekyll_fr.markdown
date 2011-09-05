@@ -1,0 +1,14 @@
+---
+layout: links
+title: Jekyll
+lang: fr
+translation: auto
+tags: [ webserver ]
+---
+
+{{ post.id }}
+Jekyll est le serveur web supportant ce site.
+
+Le site principal est disponible à l'[adresse](http://jekyllrb.com/)
+
+Les documentations sont accessibles dans un wiki installé sur le [dépot github](https://github.com/mojombo/jekyll/wiki).

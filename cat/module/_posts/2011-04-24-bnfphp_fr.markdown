@@ -1,0 +1,68 @@
+---
+layout: module
+title: bnfphp
+tags: [ bnf, php ]
+image: /docs/modules/images/bnfphp_icon.png
+lang: fr
+translation: auto
+css: bnfphp
+free: true
+compatibilities: [ php_53 ]
+compliances: [ oo ]
+reference: true
+resume: BnfPhp est une librairie php parsant des règles bnf afin de générer des motifs ou des représentations de celles-ci.
+demo: /demos/bnf/
+---
+Présentation
+-----------------
+BnfPhp est une bibliothèque php parsant des règles [bnf](http://fr.wikipedia.org/wiki/Forme_de_Backus-Naur "Forme de Backus-Naur") afin de générer des motifs ou des représentations de celles-ci.
+
+Utilisation
+-------------
+L'utilisation de la classe est simple et se réalise en deux étapes.
+*Création de l'objet bnf et intégration des règles
+*Affichage d'une règle (logique ou réel)
+{% highlight php %}
+<?php
+$bnf = new bnf("a bnf id", "a file with bnf rules");
+$bnf->table("a rule's name");
+?>
+{% endhighlight %}
+
+Le résultat est similaire à ceci :
+{% assign imgTitle = "Un tableau Json" %}
+{% assign imgSrc = "/docs/modules/bnf/json_array.png" %}
+{% include partial_inline_image.html %}
+
+De nombreux examples sont présents dans le répertoire test. Différentes réalisations sont disponibles sur la page de [démo](/demos/bnf/).
+
+Architecture
+-----------------
+### Diagramme de classe
+
+{% assign imgTitle = "Diagramme de classe" %}
+{% assign imgSrc = "/docs/modules/bnf/class_diagrams.png" %}
+{% include partial_inline_image.html %}
+
+### Intégration des règles
+
+Le parsing est réalisé suivant la séquence suivante :
+
+{% assign imgTitle = "Séquence d'intégration" %}
+{% assign imgSrc = "/docs/modules/bnf/parsing_sequence.png" %}
+{% include partial_inline_image.html %}
+
+### Dessin des règles
+
+Le dessin est réalisé en créant des tableaux html multiples et imbriqué, le placement des liens est réalisé suivant des règles css précisant les différentes images à utilisé. A noter qu'un tableau de plus de 5000pixel de hauteur pourra présenté des absences de continuité sur certaines lignes verticales. Les dessins sont réalisé en php suivant la séquence suivante :
+
+{% assign imgTitle = "Séquence de dessin" %}
+{% assign imgSrc = "/docs/modules/bnf/drawing_sequence.png" %}
+{% include partial_inline_image.html %}
+
+Documentation
+---------------------
+L'ensemble de la documentation est disponible ici
+
+
+

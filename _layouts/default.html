@@ -1,19 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-{% include translation.markdown %}{{ logTranslation }}
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{codeLang}}" lang="{{codeLang}}" class="{{css}}"> 
-<head profile="http://gmpg.org/xfn/11"> 
-	<title>{{page.title}} &raquo; Nicolas de Marqué on github</title> 
-	<meta name="description" content="{{page.title}} &raquo; Nicolas de Marqué on github" /> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{codeLang}}" lang="{{codeLang}}" class="{{css}}">{% capture nil %}
+{% case lang %}
+	{% when "en" %}
+		{% assign toptitle  = "Ndm on github" %}
+		{% assign subtitles = "Personal blog about everything and specifically about developpements presents on my git account" %}
+		{% assign skiptocontent = "Skip to Content" %}
+	{% when "fr" %}
+		{% assign toptitle  = "Ndm sur github" %}
+		{% assign subtitles = "Blog personnel a propos de tout et plus particulièrmenent des développements présents sur git" %}
+		{% assign skiptocontent = "Allez au Contenu" %}
+{% endcase %}{% endcapture %}
+<head> 
+
+	<title>{{page.title}} &raquo; {{toptitle}}</title> 
+
+	<meta name="description" content="{{page.title}} &raquo; {{toptitle}}" /> 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 
 	<link rel="stylesheet" type="text/css" href="/assets/styles/generique.css"/> 
 	<link rel="stylesheet" type="text/css" href="/assets/styles/syntax.css" /> 
 	<link rel="stylesheet" type="text/css" href="/assets/styles/logos.css" /> 
+	<link rel="stylesheet" type="text/css" href="/assets/styles/pages/default.css"/> 
 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/layout.css"/> 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/menu.css"/> 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/page.css"/> 
-	<link rel="stylesheet" type="text/css" href="/assets/styles/modules/pieddepage.css"/> 
 	<link rel="alternate" type="application/atom+xml" href="/complete.xml" title="Ndm RSS feed" /> 
 	<link rel="alternate" type="application/atom+xml" href="/feed" title="Ndm Posts RSS feed" /> 
 	<link rel="alternate" type="application/atom+xml" href="/cat/links/feed" title="Ndmf Links RSS feed" /> 
@@ -21,38 +29,50 @@
  
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" /> 
  
-	<link rel="openid.server" href="http://ifup.org:4567/" /> 
-	<link rel="openid.delegate" href="http://ifup.org/" />
-	
 	<script type="text/javascript" src="http://use.typekit.com/tsv4oui.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 </head> 
+
 <body> 
-	<div id="page"> 
-		<div class="bord gauche page"></div> 
-		<div class="bord droit page"></div> 
-		<div id="entete">
-			<div id="skip-nav"> 
-				<a href="#main">Skip to Content</a> 
+	<div id="first-backcolor" class="back color"></div>
+	<div id="second-backcolor" class="back color"></div>
+	<div id="page-attenuation"></div>
+	<div id="back-gradient"></div>
+	<div id="page">
+		<div class="side left page"></div> 
+		<div class="side right page"></div> 
+		<div id="header">
+			<div id="skip-nav" class="topchoice"><a href="#content">{{skiptocontent}}</a></div>
+			{% if translationUrl != false %}
+			<div id="language-selection" class="topchoice">
+				<div class="lang {{ lang }}">
+					<a href="{{ translationUrl }}" title="{{langVersion|capitalize}}">
+						<span class="accessibilite">{{langVersion|capitalize}}</span>
+						{{langVersion|capitalize}}
+					</a>
+				</div>
+			</div>
+			{% endif %}
+			<div class="headernotes">{{ search }}
+			</div>
+			<div class="logo"></div>
+			<div class="title">Modulo</div>			
+			<div class="subtitle">{{ subtitles }}</div>			
+		</div>
+		<div id="menu">{% include menu.html %}
+		</div>
+		<div id="content">
+{% for line in content %}			{{ line }}{% endfor %}
+		</div>
+		<div id="footer">
+			<div class="footernotes">
+				<div class="copyright">
+					&copy; 2011-{{ site.time | date: '%Y' }} - Design by ndm
+				</div>
 			</div>			
 		</div>
-		
-		{% include menu.html %}
-		
-		<div id="main" class="pos"></div>
-		<div id="content">
-			{{ content }}
-		</div> 
- 
-		<div id="piedpage">
-			<div class="copyright">&copy; 2011-{{ site.time | date: '%Y' }} - Design by ndm</div>
-		</div>
-
 	</div>
-
-	<!-- Comments -->			
-	{% include disqus_layout.html %}
-
+{% include disqus_layout.html %}
 </body> 
 </html> 

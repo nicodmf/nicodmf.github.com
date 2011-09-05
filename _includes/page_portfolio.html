@@ -1,0 +1,8 @@
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+{% if lang == "fr" %}
+	{% assign resume = "Ce portfolio represent mes meilleurs travaux" %}
+{% else %}
+	{% assign resume = "This portfolio represents my best work :" %}
+{% endif %}
+
+{{resume}}

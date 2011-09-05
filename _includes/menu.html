@@ -1,10 +1,26 @@
-<div id="mainnav" class="nav"> 
-	<a href="/pages/contact">Contact</a>
-	<a href="/">Blog</a>
-	<a href="/pages/archives">Archives</a>
-	<a href="/pages/portfolio">Portfolio</a>
-	<a href="http://github.com/nicodmf">Modules</a>
-	<a href="/cat/links">Links</a>
-	<a href="/cat/cadavres_exquis">Cadavres exquis</a>
-</div> 
-
+{% capture log %}
+{% if lang == "fr" %}
+	{% assign home = "Accueil" %}
+	{% assign modules = "Modules" %}
+	{% assign demos = "Démos" %}
+	{% assign portfolio = "Portfolio" %}
+	{% assign links = "Liens" %}
+	{% assign archives = "Archives" %}
+	{% assign contact = "Contact" %}
+{% else %}
+	{% assign home = "HomePage" %}
+	{% assign modules = "Modules" %}
+	{% assign demos = "Demos" %}
+	{% assign portfolio = "Portfolio" %}
+	{% assign links = "Links" %}
+	{% assign archives = "Archives" %}
+	{% assign contact = "Contact" %}
+{% endif %}
+{% endcapture %}
+			<a href="/index_{{lang}}">{{ home }}</a> -
+			<a href="/pages/module_{{lang}}">{{ modules }}</a> -
+			<!--<a href="/pages/demos_{{lang}}">{{ demos }}</a>
+			<a href="/pages/portfolio_{{lang}}">{{ portfolio }}</a> - -->
+			<a href="/pages/archives_{{lang}}">{{ archives }}</a> -
+			<a href="/pages/link_{{lang}}">{{ links }}</a> -
+			<a href="/pages/contact_{{lang}}">{{ contact }}</a>

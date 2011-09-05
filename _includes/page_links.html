@@ -1,0 +1,30 @@
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+
+{% if lang == "fr" %}
+	{% assign titre  = "Liens" %}
+	{% assign posted = "posté le" %}
+{% else %}
+	{% assign titre  = "Links" %}
+	{% assign posted = "posted" %}
+{% endif %}
+<h1>{{titre}}</h1> 
+<div class="modules"> 
+{% for p in site.posts %}
+	{% assign rlang = false %}
+	{% assign lang1 = false %}
+	{% assign lang2 = false %}
+	{% if p.lang == page.lang %}{% assign lang1 = true %}{% endif %}
+	{% if p.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
+	{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}
+
+	{% assign cats = false %}
+	{% for cat in p.categories %}
+		{% if cat == "link" %}{% assign cats = true %}{% endif %}
+	{% endfor %}
+
+	{% if cats and rlang %}
+		<h2><a href="{{ p.url }}">{{ p.title }}</a></h2> 
+		<div class="date">{{posted}} {{ p.date | date_to_string }}</div> 
+	{% endif %}
+{% endfor %}
+</div> 

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 
 {% if page.toTranslate %}
 	{% include translation.data.markdown %}
@@ -9,7 +10,7 @@ layout: default
 {% assign post = page %}
 
 <div class="post">
-<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
+<h1>{{post.title}}</h1>
 <div class="date">posted {{ post.date | date_to_string }}</div>
 
 	<div class="entry">
@@ -44,7 +45,7 @@ layout: default
   <h2>Related Posts</h2>
   <ul class="posts">
 	{% for post in site.related_posts limit:4 %}
-		{% if post.id != page.translation %}
+		{% if post.lang == page.lang %}
 			<li>
 				<span>{{ post.date | date_to_string }}</span>
 				&raquo; <a href="{{ post.url }}">{{ post.title }}</a>

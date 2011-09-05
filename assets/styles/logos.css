@@ -35,8 +35,10 @@
 .freecultural{background-position: -448px -64px; width:159px; height:159px;}
 
 /* Langues */
-.fr{ background-position: -480px -0px; width:52px; height:32px;}
-.en{ background-position: -532px -0px; width:52px; height:32px;}
+.fr{ background-position: -480px -0px; width:52px; height:32px; -webkit-transition: background 0.5s; -moz-transition:background 0.5s;}
+.en{ background-position: -532px -0px; width:52px; height:32px; -webkit-transition: background 0.5s; -moz-transition:background 0.5s;}
+.en:hover{ background-position: -480px -0px;}
+.fr:hover{ background-position: -532px -0px;}
 
 /* Community */
 .stumbleupon, .google, .digg, .delicious, .twitter, .reddit

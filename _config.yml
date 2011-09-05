@@ -2,5 +2,5 @@ auto: true
 markdown: rdiscount
 pygments: true
 permalink: pretty
-exclude: procps, vendor, bin
+exclude: [ procps, vendor, bin ]
 url: http://nicodmf.github.com

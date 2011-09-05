@@ -1,0 +1,40 @@
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+
+{% if lang == "fr" %}
+	{% assign titre  = "Modules" %}
+	{% assign posted = "posté" %}
+{% else %}
+	{% assign titre  = "Modules" %}
+	{% assign posted = "posted" %}
+{% endif %}
+
+{% assign specialcss = "modulelist.css" %}
+
+<h1>{{titre}}</h1> 
+<div class="modules floating activ list">
+{% for p in site.posts %}
+	{% assign rlang = false %}
+	{% assign lang1 = false %}
+	{% assign lang2 = false %}
+	{% if p.lang == page.lang %}{% assign lang1 = true %}{% endif %}
+	{% if p.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
+	{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}
+	{% assign cats = false %}
+	{% for cat in p.categories %}
+		{% if cat == "module" %}{% assign cats = true %}{% endif %}
+	{% endfor %}
+	{% for tag in p.tags %}
+		{% if tag == "module" %}{% assign cats = true %}{% endif %}
+	{% endfor %}
+	{% if cats and rlang %}
+		<div class="module item">
+			<a href="{{ p.url }}" class="item-link"></a>
+			<h2><a href="{{ p.url }}">{{ p.title }}</a></h2> 
+			<a href="{{ p.url }}"><img src="{{p.image}}" alt="Logo"></a>
+			<div class="resume">{{ p.resume }}</div>
+			<div class="date">{{posted}} {{ p.date | date_to_string }}</div> 
+		</div>		
+	{% endif %}
+{% endfor %}
+	<div class="clearer"></div>
+</div>
