@@ -1,5 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">{% capture log1 %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 {% include translation.markdown %}{{ logTranslation }}
+{% case lang %}
+	{% when "en" %}
+		{% assign compliance    = "compliance" %}
+		{% assign compatibility = "compatibility" %}
+	{% when "fr" %}
+		{% assign compliance    = "qualité" %}
+		{% assign compatibility = "compatibilité" %}
+{% endcase %}{% endcapture %}{{ logTranslation }}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{codeLang}}" lang="{{codeLang}}" class="{{css}}"> 
 <head profile="http://gmpg.org/xfn/11"> 
 	<title>{{page.title}} &raquo; Nicolas de Marqué on github</title> 
