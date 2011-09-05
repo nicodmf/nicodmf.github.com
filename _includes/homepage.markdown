@@ -31,7 +31,7 @@
 2
         {% for cat in one_post.categories %}
 2.1
-			{% if cat == 'module' %}
+			{% if cat == 'module' or cat == 'link' %}
 2.2
                 {% assign cats = true %}
 2.3
