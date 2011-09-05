@@ -29,7 +29,7 @@
 
         {% if post == null and p.lang == page.lang %}
                 {% if cats == null %}
-                        {% assign post = "p" %}
+                        {% assign post = p %}
                 {% endif %}
         {% endif %}
 {% endfor %}
