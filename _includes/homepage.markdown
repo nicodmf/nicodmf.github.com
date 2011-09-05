@@ -31,13 +31,19 @@
 			{% if cat == 'module' %}
                 {% assign cats = true %}
             {% endif %}
-        {% endfor %}
-		
-		
+        {% endfor %}		
 
         {% if post == null and ( onep.lang == page.lang or onep.lang == null ) %}
                 {% if cats == null %}
-                        {% assign post = onep %}
+					{% capture post %}					
+<div class="entry">
+	<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
+	<div class="content-entry">
+		{{ post.content }}
+		<a href="{{ site.url }}/{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">{{ str_comments }}</a>
+	</div>
+</div>
+{% endcapture %}
                 {% endif %}
         {% endif %}
 {% endfor %}
@@ -46,13 +52,7 @@
 
 
  
-<div class="entry">
-	<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
-	<div class="content-entry">
-		{{ post.content }}
-		<a href="{{ site.url }}/{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">{{ str_comments }}</a>
-	</div>
-</div>
+
 
 {{ str_archive }}
 =================
