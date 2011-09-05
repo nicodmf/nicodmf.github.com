@@ -41,7 +41,7 @@
 3
         {% if one_post.lang == page.lang  %}
 4
-                {% if cats == null %}
+                {% if cats == false %}
 5
 					{% capture post %}					
 <div class="entry">
