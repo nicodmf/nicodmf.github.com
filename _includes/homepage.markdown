@@ -43,15 +43,16 @@
 4
                 {% if cats == false %}
 5
-					{% capture post %}					
+					{% capture captured %}					
 <div class="entry">
-	<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
+	<h2><a href='{{one_post.url}}'>{{one_post.title}}</a></h2>
 	<div class="content-entry">
-		{{ post.content }}
-		<a href="{{ site.url }}/{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">{{ str_comments }}</a>
+		{{ one_post.content }}
+		<a href="{{ site.url }}/{{ one_post.url }}#disqus_thread" data-disqus-identifier="{{ one_post.url }}">{{ str_comments }}</a>
 	</div>
 </div>
 {% endcapture %}
+{% assign post = captured %}
 6
                 {% endif %}
 7
