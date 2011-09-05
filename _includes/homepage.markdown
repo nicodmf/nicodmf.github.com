@@ -16,7 +16,7 @@
 {{ str_journal }}
 =================
 {% capture log %}
-{% assign post = null %}
+{% assign post = false %}
  
 {% for p in site.posts %}
         {% assign cats = false %}
