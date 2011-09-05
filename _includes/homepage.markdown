@@ -19,7 +19,7 @@
 {% assign post = null %}
  
 {% for p in site.posts %}
-        {% assign cats = null %}
+        {% assign cats = false %}
 
         {% for cat in p.categories %}
 			{% if cat == 'module' %}
