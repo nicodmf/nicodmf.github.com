@@ -61,7 +61,7 @@
 {% endcapture %}
 {{ post }}
 
-{% include pages_archives.html %}
+{% include page_archives.html %}
  
 {{ str_about }}
 =============== 
