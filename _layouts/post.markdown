@@ -25,7 +25,7 @@ layout: default
 <div class="post">
 	<h1>{{post.title}}</h1>
 	<div class="date">posted {{ post.date | date_to_string }}
-	{% if cat != "" %} in categories {{cats}}{%endif%}
+	{% if cat != "" %} in categories {{cats}}{% endif %}
 	{% if cat != "" %} tagged with {{tags}}{% endif%}
 	</div>
 
