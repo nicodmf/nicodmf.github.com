@@ -15,12 +15,10 @@ layout: default
 
 {% endcapture %}
 
-
 {% assign post = page %}
 {% assign cats = "" %}
 {% assign tags = "" %}
 
-{{post.categories }}
 {% capture cats %}{% for cat in post.categories %}<span class="cat">{{cat}}</span> {% endfor %}{% endcapture %}	
 {% capture tags %}{% for tag in post.tags %}<span class="tag">{{tag}}</span> {% endfor %}{% endcapture %}		
 
