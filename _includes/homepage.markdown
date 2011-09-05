@@ -38,7 +38,7 @@
 6
         {% endfor %}		
 7
-        {% if post == null and ( onep.lang == page.lang or onep.lang == null ) %}
+        {% if post == null and onep.lang == page.lang  %}
 8
                 {% if cats == null %}
 9
