@@ -22,13 +22,20 @@
 	{% if post.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
 	{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}	
 	
+	{{ assign size = 1}}
+
+	{% for p in site.posts %}
+		{% if p.tags contains post.tagtodraw or p.categories contains post.tagtodraw %}
+			{{ assign size = size|plus:1}}
+		{% endif %}
+	{% endfor %}
 	{% if rlang %}
 	<div class="item">
 		<a href="{{ post.url }}" class="item-link"></a>
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 		<div class="date">{{posted}} {{ post.date | date_to_string }}</div> 
 		<div class="resume">{{ post.tagtodraw }}</div>
-		<div class="quantite">{{site.categories.{{tagtodraw}}|size}}</div>
+		<div class="quantite">{{size}}</div>
 	</div>
 	{% endif %}
 {% endfor %}
