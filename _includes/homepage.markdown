@@ -25,6 +25,7 @@
 {% assign post = null %}
  
 {% for onep in site.posts %}
+	{% if post == null %}
 1
         {% assign cats = false %}
 2
@@ -38,7 +39,7 @@
 2.4
         {% endfor %}		
 3
-        {% if post == null and onep.lang == page.lang  %}
+        {% if onep.lang == page.lang  %}
 4
                 {% if cats == null %}
 5
@@ -55,6 +56,7 @@
                 {% endif %}
 7
         {% endif %}
+	{% endif %}
 {% endfor %}
 {% endcapture %}
 {{ log }}
