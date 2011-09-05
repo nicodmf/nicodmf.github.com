@@ -33,6 +33,7 @@
 			{% if cats == false %}
 				{% capture captured %}					
 <div class="entry">
+
 <a href='{{one_post.url}}'>{{one_post.title}}</a>
 =================================================
 
