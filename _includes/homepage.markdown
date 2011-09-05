@@ -50,7 +50,7 @@
 	{% assign nbposts = "5" %}
 
 	{% assign ref = 0  %}
-	{% assign lis = "" %}
+	{% assign lis = " " %}
 	{% assign cats = true %}
 	{% for post in site.posts %}
 		{% assign nb = false %}
