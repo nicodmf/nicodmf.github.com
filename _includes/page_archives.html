@@ -30,7 +30,9 @@
 	
 	{% assign cats = true %}
 	
+	{% capture displaycats %}	
 	{% include define_tags.html %}
+	{% endcapture %}
 
 	{% if cats and rlang and count < max %}
 	
