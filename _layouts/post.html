@@ -22,7 +22,7 @@ layout: default
 	<h1>{{page.title}}</h1>
 	<div class="date">posted {{ page.date | date_to_string }}
 	{% if cats != "" %} in categories {{cats}}{% endif %}
-	{% if tags != "" %} tagged with {{tags}}{% endif%}
+	{% if tags != "" %} tagged with "{{tags}}"{% endif%}
 	</div>
 
 	<div class="entry">
