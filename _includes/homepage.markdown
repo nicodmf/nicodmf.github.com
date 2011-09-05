@@ -61,47 +61,7 @@
 {% endcapture %}
 {{ post }}
 
-{{ str_archive }}
-=================
-<ul class="posts">{% capture log %}
-
-	{% assign nbposts = "5" %}
-
-	{% assign ref = 0  %}
-	{% assign lis = " " %}
-	{% assign cats = true %}
-	{% for post in site.posts %}
-		{% assign nb = false %}
-		{% assign rlang = false %}
-		{% assign lang1 = false %}
-		{% assign lang2 = false %}
-		{% if ref != nbposts %}{% assign nb = true %}{% endif %}		
-		{% if post.lang == page.lang %}{% assign lang1 = true %}{% endif %}
-		{% if post.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
-		{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}
-		
-		{% for cat in post.categories %}
-			{% case cat %}
-				{% when "tagpage" %} {% assign cats = false %}
-				{% when "tags" %} {% assign cats = false %}
-			{% endcase %}
-		{% endfor %}
-
-		{% if rlang and nb and cats %}
-			{% capture refreal %}{{ ref|plus:1 }}{%endcapture%}
-			{% assign ref = refreal %}
-			{% capture lis %}{{ lis }}
-	<li>
-		<span class="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-	</li>{% endcapture %}
-	
-		{% endif %}
-	{% endfor %}
-	{% endcapture %}{{ lis }}
-	<li>
-		<a href="/pages/archives_{{page.lang}}">{{ str_carchive }}</a>
-	</li>
-</ul>
+{% include pages_archives.html %}
  
 {{ str_about }}
 =============== 
