@@ -34,8 +34,7 @@
 				{% capture captured %}					
 <div class="entry">
 
-[{{one_post.title}}]({{one_post.url}})
-======================================
+<h2><a href='{{one_post.url}}'>{{one_post.title}}</a></h2>
 
 	<div class="content-entry">
 		{{ one_post.content }}
