@@ -26,7 +26,9 @@
 
 	{% for p in site.posts %}
 		{% if p.tags contains post.tagtodraw or p.categories contains post.tagtodraw %}
-			{% assign size = size|plus:1%}
+			{% if rlang %}
+				{% assign size = size|plus:1%}
+			{% endif %}
 		{% endif %}
 	{% endfor %}
 	{% if rlang %}
