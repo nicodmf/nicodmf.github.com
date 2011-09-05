@@ -50,6 +50,7 @@
 {% endcapture %}
 {{ post }}
 
+{% assign max = 2 %}
 {% include page_archives.html %}
 
 <a href="/pages/archives_{{page.lang}}">{{ str_carchive }}</a>
