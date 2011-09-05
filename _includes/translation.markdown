@@ -73,5 +73,5 @@ Recherche des variables de référence
 {% endif %}
 
 {% endcapture %}{% assign llogTranslation = nologTranslation %}
-{{ page.translation}} {{ page.url }}
+{{ page.translation}} {{ page.url|replace:"_fr","_en" }}
 Translation finale: {{ translationUrl }}
