@@ -22,11 +22,11 @@
 	{% if post.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
 	{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}	
 	
-	{{ assign size = 1}}
+	{% assign size = 1%}
 
 	{% for p in site.posts %}
 		{% if p.tags contains post.tagtodraw or p.categories contains post.tagtodraw %}
-			{{ assign size = size|plus:1}}
+			{% assign size = size|plus:1%}
 		{% endif %}
 	{% endfor %}
 	{% if rlang %}
