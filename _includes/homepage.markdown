@@ -49,10 +49,7 @@
 {% endfor %}
 {% endcapture %}
 {{ log }}
-
-
- 
-
+{{ post }}
 
 {{ str_archive }}
 =================
