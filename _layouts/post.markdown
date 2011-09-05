@@ -15,6 +15,8 @@ layout: default
 
 {% endcapture %}
 
+{% assign post = page %}
+
 {% for cat in post.categories %}
 	<span class="cat">{{cat}}</span>
 {% endfor %}
@@ -26,8 +28,6 @@ layout: default
 	<span class="tag">{{tag}}</span>
 {% endfor %}
 {% endcapture %}		
-
-{% assign post = page %}
 
 <div class="post">
 <h1>{{post.title}}</h1>
