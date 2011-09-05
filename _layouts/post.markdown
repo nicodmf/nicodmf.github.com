@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
+{% capture debug %}
+
 {% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 
-{% if page.toTranslate %}
-	{% include translation.data.markdown %}
+{% if lang == "fr" %}
+	{% assign titre  = "Articles de la categorie " %}
+	{% assign posted = "Posté le" %}
+{% else %}
+	{% assign titre  = "Articles in " %}
+	{% assign posted = "Posted the" %}
 {% endif %}
+
+{% endcapture %}
 
 {% assign post = page %}
 
