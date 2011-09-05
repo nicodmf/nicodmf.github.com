@@ -16,7 +16,7 @@ layout: default
 {% endcapture %}
 
 {% assign post = page %}
-
+{{post.categories }}
 {% for cat in post.categories %}
 	<span class="cat">{{cat}}</span>
 {% endfor %}
