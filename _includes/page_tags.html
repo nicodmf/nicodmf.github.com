@@ -13,13 +13,13 @@
 {% endcapture %}
 <h1>{{titre}} {{ page.tagtodraw }}</h1> 
 <div class="tag list"> 
-{% for post in site.posts %}
+{% for current_post in site.posts %}
 
 	{% assign rlang = false %}
 	{% assign lang1 = false %}
 	{% assign lang2 = false %}
-	{% if post.lang == page.lang %}{% assign lang1 = true %}{% endif %}
-	{% if post.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
+	{% if current_post.lang == page.lang %}{% assign lang1 = true %}{% endif %}
+	{% if current_post.lang == null and page.lang == 'fr' %}{% assign lang2 = true %}{% endif %}
 	{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}	
 	
 	{% assign cats = false %}
@@ -28,16 +28,16 @@
 
 	{% if cats and rlang %}
 	<div class="item">
-		<a href="{{ post.url }}" class="item-link"></a>
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		<div class="date">{{posted}} {{ post.date | date_to_string }}</div> 
+		<a href="{{ current_post.url }}" class="item-link"></a>
+		<h2><a href="{{ current_post.url }}">{{ current_post.title }}</a></h2>
+		<div class="date">{{posted}} {{ current_post.date | date_to_string }}</div> 
 		<div class="cats">
 			<div class="insidecats">
 				<hr>
 				{{ displaycats }}
 			</div>
 		</div> 
-		<div class="resume">{{ post.resume }}</div>
+		<div class="resume">{{ current_post.resume }}</div>
 	</div>
 	{% endif %}
 {% endfor %}
