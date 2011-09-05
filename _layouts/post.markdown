@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% capture debug %}
+1{% capture debug %}
 
 {% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 
@@ -12,13 +12,13 @@ layout: default
 	{% assign titre  = "Articles in " %}
 	{% assign posted = "Posted the" %}
 {% endif %}
-
+2
 {% endcapture %}
 
 {% assign post = page %}
 {% assign cats = "" %}
 {% assign tags = "" %}
-
+3
 {% capture cats %}{% for cat in post.categories %}<span class="cat">{{cat}}</span> {% endfor %}{% endcapture %}	
 {% capture tags %}{% for tag in post.tags %}<span class="tag">{{tag}}</span> {% endfor %}{% endcapture %}		
 
