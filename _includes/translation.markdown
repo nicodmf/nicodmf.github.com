@@ -1,4 +1,3 @@
-{% capture logTranslation %}
 Translation
 ===========
 
@@ -71,5 +70,3 @@ Recherche des variables de référence
 	{% assign langref = page.lang %}
 
 {% endif %}
-
-{% endcapture %}{% assign nlogTranslation = nologTranslation %}
