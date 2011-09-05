@@ -33,7 +33,7 @@ Sur une ligne pour éviter les lignes inutiles
 {% case page.translation %}
 	{% when "auto" %}Auto
 		{% if lang == "fr" %}{% assign translationUrl = page.url|replace:"_fr","_en" %}fr->en{% endif %}
-		{% if lang == "en" %}{% assign translationUrl = page.url|replace:"_en","_en" %}en->fr{% endif %}
+		{% if lang == "en" %}{% assign translationUrl = page.url|replace:"_en","_fr" %}en->fr{% endif %}
 	{% when null %}
 		{% assign translationUrl = false %}
 	{% else %}
