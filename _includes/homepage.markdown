@@ -1,4 +1,7 @@
+{% capture logTranslation %}
+
 {% if lang == null %}{% include translation.markdown %}{{ nologTranslation }}{% endif %}
+
 {% if lang == "fr" %}
 	{% assign str_comments = "Commentaires" %}
 	{% assign str_archive  = "Archives" %}
@@ -12,6 +15,9 @@
 	{% assign str_journal  = "Journal" %}
 	{% assign str_about    = "About" %}
 {% endif %}
+
+{% endcapture %}
+
 
 {{ str_journal }}
 =================

@@ -1,4 +1,6 @@
-{% if lang == null %}{% include translation.markdown %}{{ nologTranslation }}{% endif %}
+{% capture logTranslation %}
+
+{% if lang == null %}{% include translation.markdown %}{% endif %}
 
 {% if lang == "fr" %}
 	{% assign titre  = "Journal de bord" %}
@@ -8,6 +10,7 @@
 	{% assign posted = "Posted the" %}
 {% endif %}
 
+{% endcapture %}
 <h1>{{titre}}</h1> 
 <div class="archive list"> 
 {% for post in site.posts %}
