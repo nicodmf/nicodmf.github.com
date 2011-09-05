@@ -2,6 +2,7 @@
 layout: post
 categories: [ coupdegueule, opensource, launchpad ]
 published: true
+title: Coup de gueule sur le launchpad
 lang: fr
 ---
 
