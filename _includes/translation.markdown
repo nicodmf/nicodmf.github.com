@@ -34,7 +34,7 @@ Définition de la traduction
 
 Sur une ligne pour éviter les lignes inutiles
 {% case page.translation %}
-	{% when "auto" %}
+	{% when "auto" %}Auto
 		{% if lang == "fr" %}{% capture translationUrl %}{{ page.url|replace:"_fr","_en" }}{% endcapture %}fr->en{% endif %}
 		{% if lang == "en" %}{% capture translationUrl %}{{ page.url|replace:"_en","_fr" }}{% endcapture %}en->fr{% endif %}
 	{% when null %}
@@ -75,6 +75,6 @@ Recherche des variables de référence
 {% endif %}
 
 {% endcapture %}{% assign llogTranslation = nologTranslation %}
-{{ page.translation}} {{ page.url|replace:"_fr","_en" }}
+{{ page.translation}} {% assign translationUrl = page.url|replace:"_fr","_en" }}
 Translation finale: {{ translationUrl }}
 {{ logTranslation }}
