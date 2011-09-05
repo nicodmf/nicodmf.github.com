@@ -1,4 +1,4 @@
-{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+{% capture debug %}{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 
 {% if lang == "fr" %}
 	{% assign titre  = "Modules" %}
@@ -9,7 +9,7 @@
 {% endif %}
 
 {% assign specialcss = "modulelist.css" %}
-
+{% endcapture %}
 <h1>{{titre}}</h1> 
 <div class="modules floating activ list">
 {% for p in site.posts %}
