@@ -7,13 +7,13 @@
 	{% assign str_archive  = "Archives" %}
 	{% assign str_carchive = "Archives complètes" %}
 	{% assign str_journal  = "Journal" %}
-	{% assign str_about    = "A propos" %}
+	{% assign str_about	= "A propos" %}
 {% else %}
 	{% assign str_comments = "Comments" %}
 	{% assign str_archive  = "Archive" %}
 	{% assign str_carchive = "Complete archive" %}
 	{% assign str_journal  = "Journal" %}
-	{% assign str_about    = "About" %}
+	{% assign str_about	= "About" %}
 {% endif %}
 
 {% endcapture %}
@@ -26,27 +26,19 @@
  
 {% for one_post in site.posts %}
 	{% if post == null %}
-1
-        {% assign cats = false %}
-2
-        {% for cat in one_post.categories %}
-2.1
+		{% assign cats = false %}
+		{% for cat in one_post.categories %}
 			{% if cat == 'module' or cat == 'link' %}
-2.2
-                {% assign cats = true %}
-2.3
-            {% endif %}
-2.4
-        {% endfor %}		
-3
-        {% if one_post.lang == page.lang  %}
-4
-                {% if cats == false %}
-5
-					{% capture captured %}					
+				{% assign cats = true %}
+			{% endif %}
+		{% endfor %}		
+		{% if one_post.lang == page.lang  %}
+			{% if cats == false %}
+				{% capture captured %}					
 <div class="entry">
 <a href='{{one_post.url}}'>{{one_post.title}}</a>
 =================================================
+
 	<div class="content-entry">
 		{{ one_post.content }}
 		<a href="{{ site.url }}/{{ one_post.url }}#disqus_thread" data-disqus-identifier="{{ one_post.url }}">{{ str_comments }}</a>
@@ -54,10 +46,8 @@
 </div>
 {% endcapture %}
 {% assign post = captured %}
-6
-                {% endif %}
-7
-        {% endif %}
+			{% endif %}
+		{% endif %}
 	{% endif %}
 {% endfor %}
 {% endcapture %}
