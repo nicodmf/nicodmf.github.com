@@ -5,13 +5,13 @@ lang: fr
 translation: auto
 tags: [ dev, javascript, mootools, jquery, textcontinu ]
 image: /docs/modules/images/textcontinu_icon.png
+resume: Un plugin jquery/mootools qui dessine un texte suivi dans des conteneurs multiples.
 
 css: textcontinu
 reference: true
 free: true
 compatibilities: [ mootools, jquery2, firefox, ie, opera ]
 compliances: [ w3c, ccbyncsa ]
-resume: Un plugin jquery/mootools qui dessine un texte suivi dans des conteneurs multiples.
 
 ---
 Présentation

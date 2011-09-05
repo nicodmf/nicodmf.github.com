@@ -1,16 +1,17 @@
 ---
 layout: module
-title: bnfphp
+title: BNF php
 tags: [ bnf, php ]
 image: /docs/modules/images/bnfphp_icon.png
 lang: fr
 translation: auto
+resume: BnfPhp est une librairie php parsant des règles bnf afin de générer des motifs ou des représentations de celles-ci.
+
 css: bnfphp
 free: true
 compatibilities: [ php_53 ]
 compliances: [ oo ]
 reference: true
-resume: BnfPhp est une librairie php parsant des règles bnf afin de générer des motifs ou des représentations de celles-ci.
 demo: /demos/bnf/
 ---
 Présentation
@@ -62,7 +63,7 @@ Le dessin est réalisé en créant des tableaux html multiples et imbriqué, le 
 
 Documentation
 ---------------------
-L'ensemble de la documentation est disponible ici
+L'ensemble de la documentation peut être créer à l'aide de Doxygen.
 
 
 

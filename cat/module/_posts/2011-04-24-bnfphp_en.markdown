@@ -1,6 +1,6 @@
 ---
 layout: module
-title: bnfphp
+title: BNF Php
 tags: [ bnf, php ]
 image: /docs/modules/images/bnfphp_icon.png
 lang: en

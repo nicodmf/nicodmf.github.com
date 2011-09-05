@@ -5,12 +5,13 @@ lang: fr
 translation: auto
 tags: [ dev, javascript, mootools, textmorph ]
 image: /docs/modules/images/textmorph_icon.png
+resume: Un plugin jQuery/mootools réalisant des formes prédéfinies avec un texte.
+
 css: textmorph
 reference: true
 free: true
 compatibilities: [ mootools, jquery2, firefox, ie, opera ]
 compliances: [ w3c, ccbyncsa ]
-resume: Un plugin jQuery/mootools réalisant des formes prédéfinies avec un texte.
 ---
 
 Présentation
