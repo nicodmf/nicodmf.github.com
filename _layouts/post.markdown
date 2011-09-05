@@ -15,10 +15,10 @@ layout: default
 
 {% endcapture %}
 
-{% capture categories %}
 {% for cat in post.categories %}
 	<span class="cat">{{cat}}</span>
 {% endfor %}
+{% capture categories %}
 {% endcapture %}		
 
 {% capture tags %}
