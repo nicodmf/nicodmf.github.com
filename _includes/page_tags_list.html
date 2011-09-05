@@ -26,17 +26,11 @@
 	
 	{% include define_tags.html %}
 
-	{% if cats and rlang %}
+	{% if cats and rlang or true %}
 	<div class="item">
 		<a href="{{ post.url }}" class="item-link"></a>
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 		<div class="date">{{posted}} {{ post.date | date_to_string }}</div> 
-		<div class="cats">
-			<div class="insidecats">
-				<hr>
-				{{ displaycats }}
-			</div>
-		</div> 
 		<div class="resume">{{ post.tagtodraw }}</div>
 	</div>
 	{% endif %}
