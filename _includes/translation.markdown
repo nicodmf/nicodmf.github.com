@@ -16,6 +16,8 @@ Assignation des traductions
 	{% else %}     {% assign lang = "fr" %}
 {% endcase %}
 
+Langue : {{ lang }}
+
 {% if lang == "en" %}
 	{% assign otherlang     = "fr" %}
 	{% assign codeLang      = "en-En" %}
