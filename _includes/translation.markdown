@@ -1,5 +1,3 @@
-echo translation
-
 {% capture logTranslation %}
 Translation
 ===========
