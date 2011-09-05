@@ -60,7 +60,6 @@
 	{% endif %}
 {% endfor %}
 {% endcapture %}
-{{ log }}
 {{ post }}
 
 {% include page_archives.html %}
