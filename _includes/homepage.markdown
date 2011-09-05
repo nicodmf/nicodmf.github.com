@@ -22,7 +22,7 @@
 {{ str_journal }}
 =================
 {% capture log %}
-{% assign post = false %}
+{% assign post = null %}
  
 {% for p in site.posts %}
         {% assign cats = false %}
@@ -33,7 +33,7 @@
             {% endif %}
         {% endfor %}
 
-        {% if post == null and ( p.lang == page.lang or p.lang == null) %}
+        {% if post == null and ( p.lang == page.lang or p.lang == null ) %}
                 {% if cats == null %}
                         {% assign post = p %}
                 {% endif %}
