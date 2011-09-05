@@ -75,3 +75,4 @@ Recherche des variables de référence
 {% endcapture %}{% assign llogTranslation = nologTranslation %}
 {{ page.translation}} {{ page.url|replace:"_fr","_en" }}
 Translation finale: {{ translationUrl }}
+{{ logTranslation }}
