@@ -17,8 +17,8 @@ layout: default
 
 
 {% assign post = page %}
-{% assign cats = null %}
-{% assign tags = null %}
+{% assign cats = "" %}
+{% assign tags = "" %}
 
 {{post.categories }}
 {% capture cats %}{% for cat in post.categories %}<span class="cat">{{cat}}</span> {% endfor %}{% endcapture %}	
@@ -27,8 +27,8 @@ layout: default
 <div class="post">
 	<h1>{{post.title}}</h1>
 	<div class="date">posted {{ post.date | date_to_string }}
-	{% if cat != null %} in categories {{cats}}{%endif%}
-	{% if cat != null %} tagged with {{tags}}{% endif%}
+	{% if cat != "" %} in categories {{cats}}{%endif%}
+	{% if cat != "" %} tagged with {{tags}}{% endif%}
 	</div>
 
 	<div class="entry">
