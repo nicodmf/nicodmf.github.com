@@ -18,9 +18,6 @@
 
 {% endcapture %}
 
-
-{{ str_journal }}
-=================
 {% capture log %}
 {% assign post = null %}
  
