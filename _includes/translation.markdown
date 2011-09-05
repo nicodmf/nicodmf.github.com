@@ -1,3 +1,5 @@
+echo translation
+
 {% capture logTranslation %}
 Translation
 ===========
@@ -34,7 +36,9 @@ Sur une ligne pour éviter les lignes inutiles
 		{% if lang == "fr" %}{% capture translationUrl %}{{ page.url|replace:"_fr","_en" }}{% endcapture %}{% endif %}
 		{% if lang == "en" %}{% capture translationUrl %}{{ page.url|replace:"_en","_fr" }}{% endcapture %}{% endif %}
 	{% when null %}
-		{% assign translationUrl = false %}{% else %}{% assign translationUrl = page.translation %}
+		{% assign translationUrl = false %}
+	{% else %}
+		{% assign translationUrl = page.translation %}
 {% endcase %}
 
 Translation originale : {{ page.translation}}
