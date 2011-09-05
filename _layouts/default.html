@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{codeLang}}" lang="{{codeLang}}" class="{{css}}">{% capture nil %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 {% case lang %}
 	{% when "en" %}
 		{% assign toptitle  = "Ndm on github" %}
@@ -10,6 +10,7 @@
 		{% assign subtitles = "Blog personnel a propos de tout et plus particulièrmenent des développements présents sur git" %}
 		{% assign skiptocontent = "Allez au Contenu" %}
 {% endcase %}{% endcapture %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{codeLang}}" lang="{{codeLang}}" class="{{css}}">{% capture nil %}
 <head> 
 
 	<title>{{page.title}} &raquo; {{toptitle}}</title> 
