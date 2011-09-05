@@ -33,13 +33,15 @@
             {% endif %}
         {% endfor %}
 
-        {% if post == null and p.lang == page.lang %}
+        {% if post == null and ( p.lang == page.lang or p.lang == null) %}
                 {% if cats == null %}
                         {% assign post = p %}
                 {% endif %}
         {% endif %}
 {% endfor %}
 {% endcapture %}
+
+
  
 <div class="entry">
 	<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
