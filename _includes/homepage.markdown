@@ -39,7 +39,9 @@
         {% endfor %}		
 7
         {% if post == null and ( onep.lang == page.lang or onep.lang == null ) %}
+8
                 {% if cats == null %}
+9
 					{% capture post %}					
 <div class="entry">
 	<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
@@ -49,7 +51,9 @@
 	</div>
 </div>
 {% endcapture %}
+10
                 {% endif %}
+11
         {% endif %}
 {% endfor %}
 {% endcapture %}
