@@ -1,16 +1,19 @@
-{% if lang == null %}{% include translation.markdown %}{% endif %}
+{% capture debug %}
+
+{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
 
 {% if lang == "fr" %}
 	{% assign titre  = "Articles de la categorie " %}
-	{% assign posted = "PostÃ© le" %}
+	{% assign posted = "Posté le" %}
 {% else %}
 	{% assign titre  = "Articles in " %}
 	{% assign posted = "Posted the" %}
 {% endif %}
 
-<h1>{{titre}} {{ page.tagtodraw }}</h1> 
+{% endcapture %}
+<h1>{{titre}}</h1> 
 <div class="tag list"> 
-{% for post in site.posts %}
+{% for post in site.tags.tagpage %}
 
 	{% assign rlang = false %}
 	{% assign lang1 = false %}
@@ -34,7 +37,7 @@
 				{{ displaycats }}
 			</div>
 		</div> 
-		<div class="resume">{{ post.resume }}</div>
+		<div class="resume">{{ post.tagtodraw }}</div>
 	</div>
 	{% endif %}
 {% endfor %}
