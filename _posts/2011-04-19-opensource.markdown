@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [ dev, opensource ]
+tags: [ dev, opensource, javascript ]
 published: true
 title: Opensource
 lang: fr
