@@ -33,7 +33,7 @@
             {% endif %}
         {% endfor %}
 		
-		lang : {{ p.lang }}
+		lang : {% if p.lang == empty %}empty{% endif %}
 
         {% if post == null and ( p.lang == page.lang or p.lang == null ) %}
                 {% if cats == null %}
