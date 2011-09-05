@@ -23,8 +23,10 @@
 	{% if lang1 or lang2 %}{% assign rlang = true %}{% endif %}	
 	
 	{% assign cats = false %}
-	
+
+	{% capture displaycats %}	
 	{% include define_tags.html %}
+	{% endcapture %}
 
 	{% if cats and rlang %}
 	<div class="item">
