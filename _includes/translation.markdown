@@ -68,4 +68,4 @@ Recherche des variables de référence
 
 {% endif %}
 
-{% endcapture %}{% assign logTranslation = nologTranslation %}
+{% endcapture %}{% assign llogTranslation = nologTranslation %}
