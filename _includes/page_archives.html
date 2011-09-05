@@ -43,3 +43,7 @@
 {% endfor %}
 	<div class="clearer"></div>
 </div> 
+
+{% for page in paginator.posts %}
+  {% include single_page.html %}
+{% endfor %}
