@@ -35,8 +35,7 @@ Sur une ligne pour éviter les lignes inutiles
 		{% if lang == "fr" %}{% assign translationUrl = page.url|replace:"_fr","_en" %}fr->en{% endif %}
 		{% if lang == "en" %}{% assign translationUrl = page.url|replace:"_en","_fr" %}en->fr{% endif %}
 	{% when null %}
-		{% if lang == "fr" %}{% assign translationUrl = page.url|replace:"_fr","_en" %}fr->en{% endif %}
-		{% if lang == "en" %}{% assign translationUrl = page.url|replace:"_en","_fr" %}en->fr{% endif %}
+		{% assign translationUrl = false %}
 	{% else %}
 		{% assign translationUrl = page.translation %}
 {% endcase %}
