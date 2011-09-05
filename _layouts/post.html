@@ -15,6 +15,7 @@ layout: default
 
 {% endcapture %}
 
+{% assign tags = null %}
 {% capture cats %}{% for cat in page.categories %}<span class="cat">{{cat}}</span> {% endfor %}{% endcapture %}	
 {% capture tags %}{% for tag in page.tags %}<span class="tag">{{tag}}</span> {% endfor %}{% endcapture %}		
 
