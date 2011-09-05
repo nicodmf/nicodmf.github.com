@@ -35,8 +35,8 @@ Définition de la traduction
 Sur une ligne pour éviter les lignes inutiles
 {% case page.translation %}
 	{% when "auto" %}
-		{% if lang == "fr" %}{% capture translationUrl %}{{ page.url|replace:"_fr","_en" }}{% endcapture %}{% endif %}
-		{% if lang == "en" %}{% capture translationUrl %}{{ page.url|replace:"_en","_fr" }}{% endcapture %}{% endif %}
+		{% if lang == "fr" %}{% capture translationUrl %}{{ page.url|replace:"_fr","_en" }}{% endcapture %}fr->en{% endif %}
+		{% if lang == "en" %}{% capture translationUrl %}{{ page.url|replace:"_en","_fr" }}{% endcapture %}en->fr{% endif %}
 	{% when null %}
 		{% assign translationUrl = false %}
 	{% else %}
