@@ -1,4 +1,6 @@
-{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+{% capture logTranslation %}
+
+{% if lang == null %}{% include translation.markdown %}{% endif %}
 
 {% if lang == "fr" %}
 	{% assign titre  = "Liens" %}
@@ -7,6 +9,8 @@
 	{% assign titre  = "Links" %}
 	{% assign posted = "posted" %}
 {% endif %}
+
+{% endcapture %}
 <h1>{{titre}}</h1> 
 <div class="modules"> 
 {% for p in site.posts %}
