@@ -15,23 +15,22 @@ layout: default
 
 {% endcapture %}
 
-{% assign post = page %}
-{{post.categories }}
-{% capture categories %}
-{% for cat in post.categories %}
-	<span class="cat">{{cat}}</span>
-{% endfor %}
-{% endcapture %}		
 
-{% capture tags %}
-{% for tag in post.tags %}
-	<span class="tag">{{tag}}</span>
-{% endfor %}
-{% endcapture %}		
+{% assign post = page %}
+{% assign cats = null %}
+{% assign tags = null %}
+
+{{post.categories }}
+{% capture cats %}{% for cat in post.categories %}<span class="cat">{{cat}}</span> {% endfor %}{% endcapture %}		
+
+{% capture tags %}{% for tag in post.tags %}<span class="tag">{{tag}}</span> {% endfor %}{% endcapture %}		
 
 <div class="post">
-<h1>{{post.title}}</h1>
-<div class="date">posted {{ post.date | date_to_string }} in categories {{categories}} tagged with {{tag}}</div>
+	<h1>{{post.title}}</h1>
+	<div class="date">posted {{ post.date | date_to_string }}
+	{% if cat != null %} in categories {{cats}}{%endif%}
+	{% if cat != null %} tagged with {{tags}}{% endif%}
+	</div>
 
 	<div class="entry">
 	{{ content }}
