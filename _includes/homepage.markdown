@@ -32,6 +32,8 @@
                 {% assign cats = true %}
             {% endif %}
         {% endfor %}
+		
+		lang : {{ p.lang }}
 
         {% if post == null and ( p.lang == page.lang or p.lang == null ) %}
                 {% if cats == null %}
@@ -40,6 +42,7 @@
         {% endif %}
 {% endfor %}
 {% endcapture %}
+{{ log }}
 
 
  
