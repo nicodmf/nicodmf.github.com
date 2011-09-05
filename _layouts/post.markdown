@@ -19,7 +19,7 @@ layout: default
 
 <div class="post">
 <h1>{{post.title}}</h1>
-<div class="date">posted {{ post.date | date_to_string }}</div>
+<div class="date">posted {{ post.date | date_to_string }} in categories {{post.category}} tagged with {{post.tag}}</div>
 
 	<div class="entry">
 	{{ content }}
