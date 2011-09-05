@@ -25,14 +25,19 @@
 {% assign post = null %}
  
 {% for onep in site.posts %}
+1
         {% assign cats = false %}
-
+2
         {% for cat in onep.categories %}
+3
 			{% if cat == 'module' %}
+4
                 {% assign cats = true %}
+5
             {% endif %}
+6
         {% endfor %}		
-
+7
         {% if post == null and ( onep.lang == page.lang or onep.lang == null ) %}
                 {% if cats == null %}
 					{% capture post %}					
