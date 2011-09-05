@@ -16,13 +16,13 @@ layout: default
 {% endcapture %}
 
 {% capture categories %}
-{% for cat in one_post.categories %}
+{% for cat in post.categories %}
 	<span class="cat">{{cat}}</span>
 {% endfor %}
 {% endcapture %}		
 
 {% capture tags %}
-{% for tag in one_post.tags %}
+{% for tag in post.tags %}
 	<span class="tag">{{tag}}</span>
 {% endfor %}
 {% endcapture %}		
@@ -31,7 +31,7 @@ layout: default
 
 <div class="post">
 <h1>{{post.title}}</h1>
-<div class="date">posted {{ post.date | date_to_string }} in categories {{categories}} tagged with {{post.tag}}</div>
+<div class="date">posted {{ post.date | date_to_string }} in categories {{categories}} tagged with {{tag}}</div>
 
 	<div class="entry">
 	{{ content }}
