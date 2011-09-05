@@ -1,4 +1,4 @@
-{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+{% if lang == null %}{% include translation.markdown %}{{ nologTranslation }}{% endif %}
 {% if lang == "fr" %}
 	{% assign str_comments = "Commentaires" %}
 	{% assign str_archive  = "Archives" %}
