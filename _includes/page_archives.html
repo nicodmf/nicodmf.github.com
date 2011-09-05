@@ -39,7 +39,7 @@
 	<div class="item">
 		<a href="{{ current_post.url }}" class="item-link"></a>
 		<h2><a href="{{ current_post.url }}">{{ current_post.title }}</a></h2>
-		<div class="date">{%if max<10000000%}{{ count|plus:1 }}/{{ max }}{%endif%}, {{posted}} {{ current_post.date | date_to_string }}</div> 
+		<div class="date">{%if max<10000000%}{{ count|plus:1 }}/{{ max }}, {%endif%} {{posted}} {{ current_post.date | date_to_string }}</div> 
 		<div class="cats">
 			<div class="insidecats">
 				<hr>
