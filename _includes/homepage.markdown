@@ -29,19 +29,19 @@
         {% assign cats = false %}
 2
         {% for cat in onep.categories %}
-3
+2.1
 			{% if cat == 'module' %}
-4
+2.2
                 {% assign cats = true %}
-5
+2.3
             {% endif %}
-6
+2.4
         {% endfor %}		
-7
+3
         {% if post == null and onep.lang == page.lang  %}
-8
+4
                 {% if cats == null %}
-9
+5
 					{% capture post %}					
 <div class="entry">
 	<h2><a href='{{post.url}}'>{{post.title}}</a></h2>
@@ -51,9 +51,9 @@
 	</div>
 </div>
 {% endcapture %}
-10
+6
                 {% endif %}
-11
+7
         {% endif %}
 {% endfor %}
 {% endcapture %}
