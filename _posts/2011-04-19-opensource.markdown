@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [ dev, opensource ]
+tags: [ dev, opensource ]
 published: true
 title: Opensource
 lang: fr
