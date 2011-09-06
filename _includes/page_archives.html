@@ -11,9 +11,11 @@
 {% endif %}
 
 {% endcapture %}
+
 <h1>{{titre}}</h1> 
 <div class="archive list">
 {% assign count = 0 %}
+{% assign annee = 0 %}
 {% if max > 0 %}
 	{% assign max = max %}
 {% else %}
@@ -36,9 +38,18 @@
 
 	{% if cats and rlang and count < max %}
 	
+		{% if annee != current_post.date|date:%Y %}
+			{% assign annee = current_post.date|date:%Y %}
+	<h1>{{annee}}</h1>
+		{% endif %}
+	
 	<div class="item">
 		<a href="{{ current_post.url }}" class="item-link"></a>
+		{%if max<10000000%}
 		<h2><a href="{{ current_post.url }}">{{ current_post.title }}</a></h2>
+		{%else%}
+		<h3><a href="{{ current_post.url }}">{{ current_post.title }}</a></h3>		
+		{%endif%}
 		<div class="date">{%if max<10000000%}{{ count|plus:1 }}/{{ max }}, {%endif%} {{posted}} {{ current_post.date | date_to_string }}</div> 
 		<div class="cats">
 			<div class="insidecats">
