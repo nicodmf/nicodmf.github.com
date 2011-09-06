@@ -25,7 +25,7 @@
 	{% if post == null %}
 		{% assign cats = false %}
 		{% for cat in one_post.categories %}
-			{% if cat == 'module' or cat == 'link' %}
+			{% if cat == 'module' or cat == 'link' or cat == 'tagpage' %}
 				{% assign cats = true %}
 			{% endif %}
 		{% endfor %}		
