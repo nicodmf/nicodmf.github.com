@@ -1,6 +1,7 @@
 {% for cat in current_post.categories %}
 	{% case cat %}
 		{% when "tagpage" %} {% assign cats = false %}
+		{% when "links" %} {% assign cats = false %}
 		{% when "cat" %}
 		{% when "module" %}<span class="cat real actif"><a href="/pages/{{cat}}_{{lang}}" title="{{cat|capitalize}}">{{cat}}</a></span>
 		{% when "link" %}<span class="cat real actif"><a href="/pages/{{cat}}_{{lang}}" title="{{cat|capitalize}}">{{cat}}</a></span>
