@@ -1,4 +1,5 @@
-{% if lang == null %}{% include translation.markdown %}{{ logTranslation }}{% endif %}
+{%capture debug %}
+{% if lang == null %}{% include translation.markdown %}{% endif %}
 
 {% if lang == "fr" %}
 	{% assign titre = "Informations de contact" %}
@@ -7,6 +8,7 @@
 	{% assign titre = "Contact informations" %}
 	{% assign email = "Email" %}
 {% endif %}
+{%endcapture%}
 
 <h1>{{titre}}</h1>
 
