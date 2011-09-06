@@ -31,6 +31,7 @@
 		{% endfor %}		
 		{% if one_post.lang == page.lang  %}
 			{% if cats == false %}
+			
 				{% capture captured %}					
 <div class="entry">
 
@@ -42,7 +43,8 @@
 	</div>
 </div>
 {% endcapture %}
-{% assign post = captured %}
+
+				{% assign post = captured %}
 			{% endif %}
 		{% endif %}
 	{% endif %}
