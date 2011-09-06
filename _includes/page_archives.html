@@ -38,8 +38,8 @@
 
 	{% if cats and rlang and count < max %}
 	
-		{% if annee != current_post.date|date:Y %}
-			{% assign annee = current_post.date|date:Y %}
+		{% if annee != current_post.date|date:"%Y" %}
+			{% assign annee = current_post.date|date:"%Y" %}
 	<h1>{{annee}}</h1>
 		{% endif %}
 	
