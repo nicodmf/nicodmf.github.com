@@ -20,5 +20,5 @@ Architecture
 Ce soft is link to djvu libre for outputing in shell wrapper the differents texts which become editable. Ce real display is make by javadjvu.
 
 {% assign imgTitle = "Schéma général" %}
-{% assign imgSrc = "/docs/modules/djvueditor/schema_general.png" %}
+{% assign imgSrc = "/docs/modules/djvutexteditor/schema_general.png" %}
 {% include partial_inline_image.html %}

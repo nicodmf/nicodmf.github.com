@@ -26,7 +26,7 @@ Architecture
 Le programme est lié à djvu libre par l'utilisation de sortie console, qui permettent la création des lignes de texte editables. L'affichage des pages réelles est quand à lui gérer par djvujava qui est controlé par un wrapper transformant la sortie AWT original en une sortie swing.
 
 {% assign imgTitle = "Schéma général" %}
-{% assign imgSrc = "/docs/modules/djvueditor/schema_general.png" %}
+{% assign imgSrc = "/docs/modules/djvutexteditor/schema_general.png" %}
 {% include partial_inline_image.html %}
 
 Documentation
