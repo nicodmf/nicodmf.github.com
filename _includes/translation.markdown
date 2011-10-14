@@ -61,6 +61,7 @@ Recherche des variables de référence
 	{% assign free = translation.free %}
 	{% assign css = translation.css %}
 	{% assign langref = translation.lang %}
+	{% assign image = translation.image %}
 
 {% else %}
 
@@ -69,5 +70,6 @@ Recherche des variables de référence
 	{% assign free = page.free %}
 	{% assign css = page.css %}
 	{% assign langref = page.lang %}
+	{% assign image = page.image %}
 
 {% endif %}
