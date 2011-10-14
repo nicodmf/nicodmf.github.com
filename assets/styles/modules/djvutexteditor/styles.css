@@ -1,10 +1,10 @@
 /* CSS Document */
 #entete   {background-image: url(fond.png);}
 
-#entete, #mainnav {background-color: #806B5B; }
+#entete, #mainnav {background-color: #3B245D; }
 
 /* Menu */
-#mainnav {border-color:#171608; }
-#mainnav a{ border:0px solid #153B03; text-shadow: 1px 1px 3px #C29052; }
+#mainnav {border-color:#130C1F; }
+#mainnav a{ border:0px solid #153B03; text-shadow: 1px -1px 3px #C29052; }
 #mainnav a{color:#F1D9B5;}
-#mainnav a:hover{background:#978F47; text-shadow: 1px 1px 3px #C29052;}
+#mainnav a:hover{background:#AA83CB; text-shadow: 1px -1px 3px #C29052;}
