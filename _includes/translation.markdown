@@ -40,6 +40,7 @@ Sur une ligne pour éviter les lignes inutiles
 		{% assign translationUrl = page.translation %}
 {% endcase %}
 
+Adresse originale : {{ page.url}}
 Translation originale : {{ page.translation}}
 Translation finale: {{ translationUrl }}
 
