@@ -1,7 +1,7 @@
 ---
 layout: module
 title: DjvuTextEditor
-tags: [ bnf, php ]
+tags: [ djvu, java ]
 image: /docs/modules/images/bnfphp_icon.png
 lang: en
 translation: auto
@@ -19,6 +19,6 @@ Architecture
 -----------------
 Ce soft is link to djvu libre for outputing in shell wrapper the differents texts which become editable. Ce real display is make by javadjvu.
 
-{% assign imgTitle = "Schéma général" %}
+{% assign imgTitle = "Global schema" %}
 {% assign imgSrc = "/docs/modules/djvutexteditor/schema_general.png" %}
 {% include partial_inline_image.html %}
