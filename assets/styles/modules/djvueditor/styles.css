@@ -1,0 +1,10 @@
+/* CSS Document */
+#entete   {background-image: url(fond.png);}
+
+#entete, #mainnav {background-color: #806B5B; }
+
+/* Menu */
+#mainnav {border-color:#171608; }
+#mainnav a{ border:0px solid #153B03; text-shadow: 1px 1px 3px #C29052; }
+#mainnav a{color:#F1D9B5;}
+#mainnav a:hover{background:#978F47; text-shadow: 1px 1px 3px #C29052;}
