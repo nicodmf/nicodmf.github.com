@@ -2,10 +2,10 @@
 layout: module
 title: DjvuTextEditor
 tags: [ djvu, java ]
-image: /docs/modules/images/djvueditor_icon.png
+image: /docs/modules/djvutexteditor/icon-djvu.png
 lang: fr
 translation: auto
-css: DjvuTextEditor
+css: djvutexteditor
 free: true
 compatibilities: [ jvm jvm16 ]
 compliances: [ oo ]

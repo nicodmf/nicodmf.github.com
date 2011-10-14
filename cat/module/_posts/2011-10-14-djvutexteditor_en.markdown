@@ -2,7 +2,7 @@
 layout: module
 title: DjvuTextEditor
 tags: [ djvu, java ]
-image: /docs/modules/images/bnfphp_icon.png
+image: /docs/modules/djvutexteditor/icon-djvu.png
 lang: en
 translation: auto
 resume: DjvuTextEditor permit to modificate hidden texts in a djvu file.
