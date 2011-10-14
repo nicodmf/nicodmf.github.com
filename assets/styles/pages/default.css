@@ -125,7 +125,7 @@ div.list.tag .item .date{position:absolute; right:1em; top:2.5em;}
 
 /* Liste des modules */
 div.list.modules .item h2{margin:0.8em 0 0.3em;}
-div.list.modules .item.module {width:40%; margin:0 5% 5% 5%; text-align:center;}
+div.list.modules .item.module {width:40%; margin:0 5% 5% 5%; text-align:center; height:250px;}
 div.list.modules img{-webkit-box-shadow: 1px 1px 12px #555; }
 div.list.modules .resume{font-size:0.7em; padding:3% 20%; line-height:1em;}
 
